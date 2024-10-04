@@ -219,6 +219,28 @@ window.onscroll = function() {
     }
 };
 
+// Function to enable arrow navigation
+document.addEventListener('DOMContentLoaded', () => {
+    const placeOptions = document.querySelector('.place-options');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    // Scroll the container to the right
+    rightArrow.addEventListener('click', () => {
+        placeOptions.scrollBy({
+            left: 300, // Adjust the scroll amount
+            behavior: 'smooth'
+        });
+    });
+
+    // Scroll the container to the left
+    leftArrow.addEventListener('click', () => {
+        placeOptions.scrollBy({
+            left: -300, // Adjust the scroll amount
+            behavior: 'smooth'
+        });
+    });
+});
 
 
 

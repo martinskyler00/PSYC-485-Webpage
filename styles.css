@@ -283,14 +283,16 @@ footer {
 
 /* Existing styles for body, header, etc. remain unchanged */
 
-/* Icon container and layout */
+/* Icon container and layout for larger screens */
 .place-options {
     display: flex;
-    flex-wrap: wrap; /* Wraps the options to next line if needed */
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     margin: 20px auto;
-    width: 80%; /* Adjust as needed */
+    width: 80%; /* Adjust width for larger screens */
+    overflow-x: auto; /* Enable horizontal scroll for small screens */
+    padding-bottom: 10px; /* Adds space to avoid content being cut off */
 }
 
 .option {
@@ -322,3 +324,99 @@ footer {
     color: #333; /* Darken the text color on hover */
 }
 
+/* For smaller screens (below 768px) - Horizontal scroll */
+@media (max-width: 768px) {
+    .place-options {
+        flex-wrap: nowrap; /* No wrapping, icons will be in a single row */
+        overflow-x: scroll; /* Horizontal scroll for smaller screens */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+        scroll-behavior: smooth; /* Smooth scrolling effect */
+    }
+
+    .option {
+        flex: 0 0 auto; /* Prevents options from shrinking and keeps them inline */
+        margin-right: 10px; /* Adds spacing between options in the scroll */
+    }
+}
+
+/* Ensures scroll bar appears for small screens */
+.place-options::-webkit-scrollbar {
+    height: 8px;
+}
+
+.place-options::-webkit-scrollbar-thumb {
+    background-color: #FF5A5F;
+    border-radius: 10px;
+}
+
+.place-options::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Container for the place options and arrows */
+.place-options-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+/* Arrows for left and right navigation */
+.arrow {
+    cursor: pointer;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Place options (icons) are displayed in a row with horizontal scroll */
+.place-options {
+    display: flex;
+    gap: 20px; /* Space between the icons */
+    overflow-x: hidden; /* Hide overflow to make the scroll work with arrows */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    width: 100%; /* Full width container for icons */
+    padding: 0 50px; /* Adjust padding for spacing next to the arrows */
+}
+
+/* Each option is aligned left, not centered */
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    flex: 0 0 auto; /* Prevents options from shrinking or growing */
+}
+
+.option img {
+    width: 50px;
+    height: 50px;
+}
+
+.option p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Option hover effect */
+.option:hover p {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #333;
+}
