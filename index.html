@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb-Style Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Logo and Account Icon -->
+    <header>
+        <div class="logo">MySite</div>
+        <div class="account-icon">
+            <img src="https://via.placeholder.com/40" alt="Account" />
+        </div>
+
+    <!-- Search Bar Container (underneath the header) -->
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" id="location" placeholder="Where are you going?" />
+            <input type="date" id="checkin-date" />
+            <input type="date" id="checkout-date" />
+            <button id="search-btn">Search</button>
+        </div>
+    </div>
+    </header>
+
+    <!-- Row of icons for different place types -->
+    <section class="place-options">
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Apartment">
+            <p>Apartment</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="House">
+            <p>House</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Cabin">
+            <p>Cabin</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Villa">
+            <p>Villa</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Cottage">
+            <p>Cottage</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Hostel">
+            <p>Hostel</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Bungalow">
+            <p>Bungalow</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Boat">
+            <p>Boat</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Treehouse">
+            <p>Treehouse</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Farmstay">
+            <p>Farmstay</p>
+        </div>
+        <div class="option">
+            <img src="https://via.placeholder.com/50" alt="Tiny House">
+            <p>Tiny House</p>
+        </div>
+    </section>
+
+    <!-- Listings Section -->
+    <section id="listings" class="listings">
+        <div class="listing-card">
+            <div class="carousel-container">
+                <div class="carousel-images">
+                    <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Image 1">
+                    <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Image 2">
+                    <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Image 3">
+                </div>
+                <div class="carousel-nav">
+                    <span class="prev-arrow">&#9664;</span> <!-- Left Arrow -->
+                    <span class="next-arrow">&#9654;</span> <!-- Right Arrow -->
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span> <!-- Active dot -->
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <h3>Modern Apartment</h3>
+            <p>New York, USA</p>
+            <p>$120/night</p>
+        </div>
+        <!-- Dynamic listing cards will be inserted here -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MySite. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

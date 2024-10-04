@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Keep logo on the left, account icon on the right */
+    align-items: center;
+    padding: 20px;
+    background-color: #FF5A5F;
+    color: white;
+    position: relative;
+    height: 150px; /* Adjusted height to fit search bar */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.account-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.account-icon img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Search Bar container inside the header */
+.search-container {
+    position: absolute;
+    bottom: 10px; /* Positioning it at the bottom of the red header */
+    left: 50%;
+    transform: translateX(-50%); /* Centering the search bar horizontally */
+    width: 60%; /* Control the width of the search bar */
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for possible future effects */
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    flex: 1;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #008489;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #006f69;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.listing-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.listing-card img {
+    width: 100%;
+    height: auto;
+}
+
+/* Carousel container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Navigation arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    visibility: hidden; /* Hide arrows by default */
+    opacity: 0; /* Initially invisible */
+    transition: visibility 0s, opacity 0.3s ease-in-out; /* Smooth fade in/out */
+}
+
+.carousel-nav .prev-arrow,
+.carousel-nav .next-arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+/* Make arrows visible on hover */
+.carousel-container:hover .carousel-nav {
+    visibility: visible; /* Show arrows on hover */
+    opacity: 1; /* Fade in */
+}
+
+/* Dots (pagination) */
+.carousel-dots {
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.carousel-dots .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.carousel-dots .active {
+    background-color: #333;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+/* Existing styles for body, header, etc. remain unchanged */
+
+/* Icon container and layout */
+.place-options {
+    display: flex;
+    flex-wrap: wrap; /* Wraps the options to next line if needed */
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%; /* Adjust as needed */
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px; /* Add spacing between options */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.option img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.option p {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    transition: all 0.3s ease; /* Smooth transition for text changes */
+}
+
+/* Hover effects: Underline and bold */
+.option:hover p {
+    font-weight: bold; /* Make text bolder on hover */
+    text-decoration: underline; /* Underline text on hover */
+    color: #333; /* Darken the text color on hover */
+}
+
