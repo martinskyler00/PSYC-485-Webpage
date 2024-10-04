@@ -10,13 +10,15 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between; /* Keep logo on the left, account icon on the right */
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #FF5A5F;
-    color: white;
+    background-color: white;
+    color: #333;
     position: relative;
-    height: 150px; /* Adjusted height to fit search bar */
+    height: 150px;
+    border-bottom: 2px solid #FF5A5F;
+    transition: all 0.3s ease-in-out; /* Smooth transition for minimizing */
 }
 
 .logo {
@@ -43,12 +45,14 @@ header {
 /* Search Bar container inside the header */
 .search-container {
     position: absolute;
-    bottom: 10px; /* Positioning it at the bottom of the red header */
+    bottom: 10px; /* Initially placed below the header */
     left: 50%;
-    transform: translateX(-50%); /* Centering the search bar horizontally */
-    width: 60%; /* Control the width of the search bar */
+    transform: translateX(-50%); /* Center the search bar horizontally */
+    width: 60%; /* Full width for the search bar initially */
+    transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
 }
 
+/* Full-size search bar */
 .search-bar {
     display: flex;
     gap: 10px;
@@ -56,7 +60,7 @@ header {
     padding: 10px;
     border-radius: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease; /* Smooth transition for possible future effects */
+    transition: all 0.3s ease;
 }
 
 .search-bar input {
@@ -78,6 +82,104 @@ header {
 .search-bar button:hover {
     background-color: #006f69;
 }
+
+/* Minimized search bar - hidden initially */
+.minimized-search {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.minimized-search.sticky {
+    display: flex;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 0 10px;
+    height: 40px;
+    background-color: white;
+}
+
+.minimized-search span {
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Ensure full search bar stays visible at top */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 2px solid #FF5A5F;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Minimized header state */
+.header-minimized {
+    height: 80px; /* Shrink the header height */
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header stays above other content */
+    background-color: white; /* Background remains white */
+}
+
+.header-minimized .logo {
+    font-size: 1rem; /* Shrink the logo size */
+}
+
+.header-minimized .account-icon {
+    width: 30px; /* Shrink account icon size */
+    height: 30px;
+}
+
+.header-minimized .search-container {
+    top: 50%; /* Center the search bar vertically */
+    bottom: auto; /* Remove bottom positioning */
+    transform: translate(-50%, -50%); /* Center horizontally and vertically */
+    width: auto; /* Shrink width when minimized */
+}
+
+/* Hide the full search bar and show minimized text */
+.header-minimized .search-bar {
+    display: none;
+}
+
+.header-minimized .minimized-search {
+    display: flex; /* Show minimized search bar */
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.minimized-search {
+    display: none;
+}
+
+.minimized-search span {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.minimized-search span:hover {
+    color: #FF5A5F;
+}
+
 
 
 .hidden {

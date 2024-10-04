@@ -204,3 +204,21 @@ function initializeCarousels() {
 window.onload = function() {
     displayListings(listingsData);
 };
+
+// Function to toggle between full and minimized search bar
+window.onscroll = function() {
+    const header = document.querySelector('header');
+    const searchBar = document.getElementById('search-bar');
+    const minimizedSearch = document.getElementById('minimized-search');
+
+    // If user scrolls down 150px, minimize the header and keep it fixed
+    if (window.scrollY > 150) {
+        header.classList.add('header-minimized'); // Fix the header and minimize it
+    } else {
+        header.classList.remove('header-minimized'); // Restore full header
+    }
+};
+
+
+
+
