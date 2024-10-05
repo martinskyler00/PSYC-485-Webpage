@@ -12,6 +12,44 @@ body {
     background-color: #f5f5f7;
 }
 
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;  /* ⬅️ Keep the header and logo centered */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    position: relative; /* ⬅️ Allows dropdown menus to be positioned relative to the navbar */
+}
+
+.navbar .logo {
+    font-size: 18px; /* ⬅️ Smaller Apple logo text */
+    font-weight: bold;
+    color: white;
+    margin-right: 30px; /* ⬅️ Add some space between the logo and the first nav item */
+}
+
+.navbar .nav-links li {
+    position: relative; /* ⬅️ Ensure dropdown menus align relative to the links */
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+    text-align: center; /* ⬅️ Center the text within each navigation item */
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px; /* ⬅️ Smaller font size for links */
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+.navbar .nav-links li a:hover {
+    text-decoration: underline;
+}
+
 /* Dropdown Menu Base Styles */
 .nav-links .dropdown {
     position: relative;
@@ -20,41 +58,39 @@ body {
 .dropdown-menu {
     position: absolute;
     top: 100%;  /* Place the dropdown just below the navbar */
-    left: 50%;  /* Start from the center of the viewport */
-    transform: translateX(-50%);  /* Move it to center under the navigation bar */
-    width: 90vw;  /* Restrict width to 90% of the viewport */
-    max-width: 1200px;  /* Cap the width to match the width of the navigation bar */
-    background-color: #000; /* Black background */
+    left: 0;  /* Align it to the very start (left) of the viewport */
+    transform: translateX(calc(100% - 90vw)); /* ⬅️ Adjust the dropdown to align with the Apple logo */
+    width: 100vw;  /* Make dropdown span full width of the viewport */
+    background-color: #000;  /* Black background */
     display: none;  /* Hidden by default */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth fade-in */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 30px; /* Reduced padding for tighter layout */
+    padding: 20px 30px; /* Padding inside the dropdown */
     z-index: 10;
-    box-sizing: border-box;
-    display: flex; /* Use flexbox to divide into columns */
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-between; /* Space between the sections (Explore, Shop, More From) */
 }
 
-/* Dropdown tab styling (Explore, Shop, More From) */
 .dropdown-tab {
-    flex: 1; /* Make each tab equal in width */
-    margin-right: 30px;  /* Reduce margin between tabs */
+    flex: 1;  
+    margin-right: 30px;
+    text-align: center; /* ⬅️ Center the text within each tab */
 }
 
 .dropdown-tab h3 {
     color: white;
-    font-size: 18px;
-    margin-bottom: 10px;  /* Reduce margin between the tab title and links */
+    font-size: 16px;  /* ⬅️ Smaller font size for section titles */
+    margin-bottom: 10px;  /* ⬅️ Reduced margin between the tab title and links */
 }
 
 .dropdown-tab a {
     color: #ccc;
     text-decoration: none;
     display: block;
-    margin-bottom: 5px;  /* Reduce space between links */
-    font-size: 14px;
+    margin-bottom: 5px;  /* ⬅️ Reduced space between links */
+    font-size: 13px;  /* ⬅️ Smaller font size for dropdown links */
 }
 
 .dropdown-tab a:hover {
@@ -68,37 +104,6 @@ body {
     visibility: visible;
 }
 
-/* Styling for the main navigation */
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: #000;
-}
-
-.navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-.navbar .nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    padding: 5px 10px;
-}
-
-.navbar .nav-links li a:hover {
-    text-decoration: underline;
-}
 
 
 
@@ -207,48 +212,68 @@ footer p {
 .featured-item {
     position: relative;
     width: 100vw;  /* Full width of the viewport */
-    min-height: 100vh;  /* Full height of the viewport */
+    min-height: 60vh;  /* Adequate height for desktop screens */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    background-size: cover;
+    background-size: cover;  /* ⬅️ Ensures the image covers the entire section */
     background-position: center;
-    padding: 50px 20px;  /* Padding top and bottom */
+    background-repeat: no-repeat;
+    padding: 20px 20px;
     box-sizing: border-box;
+    margin-bottom: 20px;  /* Added margin between featured items */
 }
 
 /* iPhone 16 Pro section */
 .iphone16-pro {
-    background-image: url('images/iphone16-pro.jpg'); /* Use the image provided */
-    background-color: #000; /* Fallback in case image doesn't load */
+    background-image: url('images/iphone\ 16\ pro.png'); /* ⬅️ Placeholder for the background image */
+    background-size: cover;  /* Ensure the image covers the entire section */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1; /* Make sure the image is behind the content */
 }
 
 /* iPhone 16 section */
 .iphone16 {
-    background-image: url('images/iphone16.jpg'); /* Use the image provided */
-    background-color: #000; /* Fallback in case image doesn't load */
+    background-image: url('images/iphone\ 16.png'); /* ⬅️ Placeholder for iPhone 16 background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+/* Apple Watch Series 10 section */
+.apple-watch10 {
+    background-image: url('images/apple\ watch.jpg'); /* ⬅️ Placeholder for Apple Watch Series 10 background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
 }
 
 /* Content for each featured item */
 .featured-content {
-    background-color: rgba(0, 0, 0, 0.7); /* Slight transparent black background */
-    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make the text readable */
+    padding: 20px;  /* ⬅️ Reduced padding inside the content area */
     border-radius: 10px;
     max-width: 800px;
-    margin: 0 auto;
+    z-index: 2; /* Ensure the content stays above the image */
+    position: relative;
 }
 
-/* Headline styling */
 .featured-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 36px;  /* ⬅️ Reduced font size for better balance */
+    margin-bottom: 15px;  /* Less space between heading and paragraph */
 }
 
 .featured-content p {
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 16px;  /* ⬅️ Slightly smaller font size */
+    margin-bottom: 20px;  /* Less space between text and button */
 }
 
 .release-info {
@@ -270,7 +295,7 @@ footer p {
     padding: 12px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.3s ease;
 }
 
@@ -287,13 +312,47 @@ footer p {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .featured-content h1 {
-        font-size: 36px;
+@media (max-width: 1024px) {
+    .featured-item {
+        min-height: 50vh;  /* ⬅️ Reduce height for smaller screens */
     }
-    
+}
+
+@media (max-width: 768px) {
+    .featured-item {
+        min-height: 45vh;  /* ⬅️ Further reduce height for tablets */
+    }
+
+    .featured-content h1 {
+        font-size: 28px;  /* Adjust heading size for smaller screens */
+    }
+
     .featured-content p {
-        font-size: 18px;
+        font-size: 14px;  /* Adjust paragraph size */
+    }
+
+    .cta-button {
+        padding: 10px 15px;  /* Smaller button padding for tablets */
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-item {
+        min-height: 40vh;  /* ⬅️ Further reduce height for small mobile screens */
+    }
+
+    .featured-content h1 {
+        font-size: 24px;
+    }
+
+    .featured-content p {
+        font-size: 12px;
+    }
+
+    .cta-button {
+        padding: 8px 12px;  /* Smaller button padding for mobile screens */
+        font-size: 10px;  /* Adjust button font size */
     }
 }
 
