@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -42,17 +43,16 @@ header {
     border-radius: 50%;
 }
 
-/* Search Bar container inside the header */
+/* Search Bar Container inside the header */
 .search-container {
     position: absolute;
-    bottom: 10px; /* Initially placed below the header */
+    bottom: 10px;
     left: 50%;
-    transform: translateX(-50%); /* Center the search bar horizontally */
-    width: 60%; /* Full width for the search bar initially */
+    transform: translateX(-50%);
+    width: 60%;
     transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
 }
 
-/* Full-size search bar */
 .search-bar {
     display: flex;
     gap: 10px;
@@ -83,7 +83,7 @@ header {
     background-color: #006f69;
 }
 
-/* Minimized search bar - hidden initially */
+/* Minimized Search Bar */
 .minimized-search {
     display: none;
     justify-content: space-between;
@@ -112,67 +112,6 @@ header {
     font-weight: bold;
     cursor: pointer;
     color: #333;
-}
-
-/* Ensure full search bar stays visible at top */
-.header-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
-    border-bottom: 2px solid #FF5A5F;
-    transition: all 0.3s ease-in-out;
-}
-
-/* Minimized header state */
-.header-minimized {
-    height: 80px; /* Shrink the header height */
-    position: fixed; /* Keep the header fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure the header stays above other content */
-    background-color: white; /* Background remains white */
-}
-
-.header-minimized .logo {
-    font-size: 1rem; /* Shrink the logo size */
-}
-
-.header-minimized .account-icon {
-    width: 30px; /* Shrink account icon size */
-    height: 30px;
-}
-
-.header-minimized .search-container {
-    top: 50%; /* Center the search bar vertically */
-    bottom: auto; /* Remove bottom positioning */
-    transform: translate(-50%, -50%); /* Center horizontally and vertically */
-    width: auto; /* Shrink width when minimized */
-}
-
-/* Hide the full search bar and show minimized text */
-.header-minimized .search-bar {
-    display: none;
-}
-
-.header-minimized .minimized-search {
-    display: flex; /* Show minimized search bar */
-    justify-content: center;
-    gap: 10px;
-    font-weight: bold;
-}
-
-.minimized-search {
-    display: none;
-}
-
-.minimized-search span {
-    cursor: pointer;
-    color: #333;
-    font-weight: bold;
     transition: color 0.2s ease;
 }
 
@@ -180,12 +119,45 @@ header {
     color: #FF5A5F;
 }
 
+/* Header states for minimized search */
+.header-minimized {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
 
+.header-minimized .logo {
+    font-size: 1rem;
+}
 
-.hidden {
+.header-minimized .account-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.header-minimized .search-container {
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: auto;
+}
+
+.header-minimized .search-bar {
     display: none;
 }
 
+.header-minimized .minimized-search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+/* Listings Grid */
 .listings {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -205,7 +177,7 @@ header {
     height: auto;
 }
 
-/* Carousel container */
+/* Carousel */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -219,10 +191,9 @@ header {
 
 .carousel-images img {
     width: 100%;
-    flex-shrink: 0; /* Prevent images from shrinking */
+    flex-shrink: 0;
 }
 
-/* Navigation arrows */
 .carousel-nav {
     position: absolute;
     top: 50%;
@@ -230,28 +201,17 @@ header {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    visibility: hidden; /* Hide arrows by default */
-    opacity: 0; /* Initially invisible */
-    transition: visibility 0s, opacity 0.3s ease-in-out; /* Smooth fade in/out */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
 }
 
-.carousel-nav .prev-arrow,
-.carousel-nav .next-arrow {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-}
-
-/* Make arrows visible on hover */
 .carousel-container:hover .carousel-nav {
-    visibility: visible; /* Show arrows on hover */
-    opacity: 1; /* Fade in */
+    visibility: visible;
+    opacity: 1;
 }
 
-/* Dots (pagination) */
+/* Dots for Carousel */
 .carousel-dots {
     text-align: center;
     margin-top: 10px;
@@ -274,72 +234,34 @@ header {
     background-color: #333;
 }
 
-
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #f7f7f7;
 }
 
-/* Existing styles for body, header, etc. remain unchanged */
+/* Place options (Icons for different property types) */
+.place-options-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+    overflow: hidden;
+}
 
-/* Icon container and layout for larger screens */
 .place-options {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px auto;
-    width: 80%; /* Adjust width for larger screens */
-    overflow-x: auto; /* Enable horizontal scroll for small screens */
-    padding-bottom: 10px; /* Adds space to avoid content being cut off */
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 20px;
+    max-width: 90%;
+    justify-content: center;
 }
 
-.option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    margin: 10px; /* Add spacing between options */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
-}
-
-.option img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
-}
-
-.option p {
-    font-size: 14px;
-    color: #555;
-    text-align: center;
-    transition: all 0.3s ease; /* Smooth transition for text changes */
-}
-
-/* Hover effects: Underline and bold */
-.option:hover p {
-    font-weight: bold; /* Make text bolder on hover */
-    text-decoration: underline; /* Underline text on hover */
-    color: #333; /* Darken the text color on hover */
-}
-
-/* For smaller screens (below 768px) - Horizontal scroll */
-@media (max-width: 768px) {
-    .place-options {
-        flex-wrap: nowrap; /* No wrapping, icons will be in a single row */
-        overflow-x: scroll; /* Horizontal scroll for smaller screens */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-        scroll-behavior: smooth; /* Smooth scrolling effect */
-    }
-
-    .option {
-        flex: 0 0 auto; /* Prevents options from shrinking and keeps them inline */
-        margin-right: 10px; /* Adds spacing between options in the scroll */
-    }
-}
-
-/* Ensures scroll bar appears for small screens */
 .place-options::-webkit-scrollbar {
     height: 8px;
 }
@@ -353,46 +275,6 @@ footer {
     background-color: #f1f1f1;
 }
 
-/* Container for the place options and arrows */
-.place-options-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    padding: 20px 0;
-    overflow: hidden;
-}
-
-/* Arrows for left and right navigation */
-.arrow {
-    cursor: pointer;
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 10;
-}
-
-.left-arrow {
-    left: 10px;
-}
-
-.right-arrow {
-    right: 10px;
-}
-
-/* Place options (icons) are displayed in a row with horizontal scroll */
-.place-options {
-    display: flex;
-    gap: 20px; /* Space between the icons */
-    overflow-x: hidden; /* Hide overflow to make the scroll work with arrows */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    width: 100%; /* Full width container for icons */
-    padding: 0 50px; /* Adjust padding for spacing next to the arrows */
-}
-
-/* Each option is aligned left, not centered */
 .option {
     display: flex;
     flex-direction: column;
@@ -400,23 +282,78 @@ footer {
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
-    flex: 0 0 auto; /* Prevents options from shrinking or growing */
+    flex: 0 0 auto;
 }
 
 .option img {
     width: 50px;
     height: 50px;
+    margin-bottom: 5px;
 }
 
 .option p {
     font-size: 14px;
     color: #555;
-    margin-top: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-/* Option hover effect */
 .option:hover p {
     font-weight: bold;
     text-decoration: underline;
     color: #333;
+}
+
+/* Arrow Styling (for carousel and icon scroll) */
+.arrow, .prev-arrow, .next-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Smaller circle size */
+    height: 30px; /* Smaller circle size */
+    border-radius: 50%;
+    border: 2px solid #FF5A5F;
+    background-color: transparent;
+    color: #FF5A5F;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow:hover, .prev-arrow:hover, .next-arrow:hover {
+    background-color: #FF5A5F;
+    color: white;
+}
+
+/* Positioning for carousel arrows */
+.carousel-nav .prev-arrow, .carousel-nav .next-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.carousel-nav .prev-arrow {
+    left: 10px;
+}
+
+.carousel-nav .next-arrow {
+    right: 10px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .place-options {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    .option {
+        flex: 0 0 auto;
+        margin-right: 10px;
+    }
 }
