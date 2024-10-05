@@ -223,13 +223,17 @@
 <!-- Featured Section for iPhone 16 Pro -->
 <section class="featured-item iphone16-pro">
     <div class="featured-content">
-        <h1>iPhone 16 Pro</h1>
-        <p>Hello, Apple Intelligence.</p>
-        <div class="buttons">
-            <a href="#" class="cta-button">Learn more</a>
-            <a href="#" class="cta-button buy-button">Buy</a>
+        <div class="top-content"> <!-- ⬅️ Added a container for the title and description -->
+            <h1>iPhone 16 Pro</h1>
+            <p>Hello, Apple Intelligence.</p>
         </div>
-        <p class="release-info">Apple Intelligence coming this fall*</p>
+        <div class="bottom-content"> <!-- ⬅️ Added a container for the buttons and release info -->
+            <div class="buttons"> <!-- ⬅️ Buttons are grouped together -->
+                <a href="#" class="cta-button">Learn More</a>
+                <a href="#" class="cta-button buy-button">Buy</a>
+            </div>
+            <p class="release-info">Apple Intelligence coming this fall*</p> <!-- ⬅️ Release info added to bottom -->
+        </div>
     </div>
 </section>
 
