@@ -19,7 +19,7 @@ function displayThumbnails() {
     const thumbnailsContainer = document.querySelector('.thumbnails');
     thumbnailsContainer.innerHTML = ""; // Clear existing thumbnails
 
-    const isSplitScreen = window.innerWidth <= 1500; // Define split-screen as width <= 1200px
+    const isSplitScreen = window.innerWidth <= 1500; // Define split-screen as width <= 1500px
     const thumbnailsToShow = isSplitScreen ? 6 : videos.length; // Show 6 or all 12 thumbnails
 
     videos.slice(0, thumbnailsToShow).forEach((video) => {
@@ -45,9 +45,38 @@ function displayThumbnails() {
     });
 }
 
-// Initial load of thumbnails and update on window resize
-window.onload = displayThumbnails;
-window.onresize = displayThumbnails;
+// Function to dynamically calculate and display shorts with updated sizing for alignment
+function displayShorts() {
+    const shortsContainer = document.querySelector('.shorts-container');
+    shortsContainer.innerHTML = ""; // Clear existing shorts
+
+    // Calculate number of shorts to fit screen width
+    const shortWidth = 160 + 20; // Adjusted width + gap
+    const shortsToShow = Math.floor(window.innerWidth / shortWidth);
+
+    videos.slice(0, shortsToShow).forEach((video) => {
+        const shortElement = document.createElement('div');
+        shortElement.classList.add('short');
+
+        // Add HTML for each short
+        shortElement.innerHTML = `
+            <img src="${video.src}" alt="${video.title}">
+            <div class="title">${video.title}</div>
+        `;
+
+        shortsContainer.appendChild(shortElement);
+    });
+}
+
+// Initial load of thumbnails and shorts, update on window resize
+window.onload = () => {
+    displayThumbnails();
+    displayShorts();
+};
+window.onresize = () => {
+    displayThumbnails();
+    displayShorts();
+};
 
 // Optional: Basic search functionality (just logs search terms)
 function searchVideos() {
