@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My YouTube Clone</title>
+    <link rel="stylesheet" href="youtube.css">
+</head>
+<body>
+    <!-- Header with Menu Icon, Logo, Search Bar, and User Options -->
+    <header>
+        <div class="left-section">
+            <!-- Menu Icon -->
+            <div class="menu-icon">☰</div>
+
+            <!-- YouTube Logo -->
+            <div class="logo">
+                <img src="youtube-logo.png" alt="YouTube" class="youtube-logo">
+            </div>
+        </div>
+
+        <!-- Centered Search Bar with Search and Voice Icons -->
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search">
+            <button class="search-icon" onclick="searchVideos()">🔍</button>
+            <button class="voice-search" onclick="voiceSearch()">🎤</button>
+        </div>
+
+        <!-- Right Section with Upload, Notifications, and Profile Icon -->
+        <div class="right-section">
+            <button class="icon-button">➕</button> <!-- Upload icon -->
+            <button class="icon-button">🔔</button> <!-- Notifications icon -->
+            <div class="account">
+                <div class="profile-icon">S</div> <!-- Profile icon placeholder -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content: Recommended Videos Section -->
+    <main>
+        <!-- Video Thumbnails Section -->
+        <section class="video-thumbnails">
+            <h2>Recommended Videos</h2>
+            <div class="thumbnails">
+                <!-- Thumbnails are dynamically added here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="youtube.js"></script>
+</body>
+</html>
