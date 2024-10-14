@@ -1,4 +1,3 @@
-// Sample data for videos, with 12 placeholder videos
 const videos = [
     { title: "Watch The Old Man Now", description: "Sponsored - Hulu", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.5M views", timestamp: "27:15" },
     { title: "JUMPING OFF BUILDINGS!", description: "MM7Games • 8 years ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.6M views", timestamp: "27:15" },
@@ -15,60 +14,59 @@ const videos = [
 ];
 
 function displayThumbnails() {
-    const thumbnailsContainer = document.querySelector('.thumbnails');
-    thumbnailsContainer.innerHTML = "";
+  const thumbnailsContainer = document.querySelector('.thumbnails');
+  thumbnailsContainer.innerHTML = "";
 
-    const isSplitScreen = window.innerWidth <= 1500;
-    const thumbnailsToShow = isSplitScreen ? 6 : videos.length;
+  const isSplitScreen = window.innerWidth <= 1500;
+  const thumbnailsToShow = isSplitScreen ? 6 : videos.length;
 
-    videos.slice(0, thumbnailsToShow).forEach((video) => {
-        const thumbnailElement = document.createElement('div');
-        thumbnailElement.classList.add('thumbnail');
-        thumbnailElement.innerHTML = `
-            <div style="position: relative;">
-                <img src="${video.src}" alt="${video.title}">
-                <div class="timestamp-overlay">${video.timestamp}</div>
-            </div>
-            <div class="info">
-                <div class="title">${video.title}</div>
-                <div class="description">${video.description}</div>
-                <div class="extra-info">
-                    <span class="views">${video.views}</span>
-                </div>
-            </div>
+  videos.slice(0, thumbnailsToShow).forEach((video) => {
+    const thumbnailElement = document.createElement('div');
+      thumbnailElement.classList.add('thumbnail');
+      thumbnailElement.innerHTML = `
+        <div style="position: relative;">
+          <img src="${video.src}" alt="${video.title}">
+          <div class="timestamp-overlay">${video.timestamp}</div>
+        </div>
+        <div class="info">
+          <div class="title">${video.title}</div>
+          <div class="description">${video.description}</div>
+          <div class="extra-info">
+              <span class="views">${video.views}</span>
+          </div>
+        </div>
         `;
-        thumbnailsContainer.appendChild(thumbnailElement);
+      thumbnailsContainer.appendChild(thumbnailElement);
     });
 }
 
 function displayShorts() {
-    const shortsContainer = document.querySelector('.shorts-container');
-    shortsContainer.innerHTML = "";
+  const shortsContainer = document.querySelector('.shorts-container');
+  shortsContainer.innerHTML = "";
 
-    const shortWidth = 160 + 20;
-    const shortsToShow = Math.floor(window.innerWidth / shortWidth);
+  const shortsToShow = window.innerWidth > 1500 ? 9 : 5;
 
-    videos.slice(0, shortsToShow).forEach((video) => {
-        const shortElement = document.createElement('div');
-        shortElement.classList.add('short');
-        shortElement.innerHTML = `
-            <img src="${video.src}" alt="${video.title}">
-            <div class="title">${video.title}</div>
+  videos.slice(0, shortsToShow).forEach((video) => {
+    const shortElement = document.createElement('div');
+      shortElement.classList.add('short');
+      shortElement.innerHTML = `
+          <img src="${video.src}" alt="${video.title}">
+          <div class="title">${video.title}</div>
         `;
-        shortsContainer.appendChild(shortElement);
+      shortsContainer.appendChild(shortElement);
     });
 }
 
 window.onload = window.onresize = () => {
-    displayThumbnails();
-    displayShorts();
+  displayThumbnails();
+  displayShorts();
 };
 
 function searchVideos() {
-    const searchInput = document.getElementById('search').value;
-    console.log("Searching for:", searchInput);
+  const searchInput = document.getElementById('search').value;
+  console.log("Searching for:", searchInput);
 }
 
 function voiceSearch() {
-    alert("Voice search functionality coming soon!");
+  alert("Voice search functionality coming soon!");
 }

@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My YouTube Clone</title>
-    <link rel="stylesheet" href="youtube.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My YouTube Clone</title>
+  <link rel="stylesheet" href="youtube.css">
 </head>
 <body>
-    <!-- Header with Menu Icon, Logo, Search Bar, and User Options -->
-    <header>
-        <div class="left-section">
-            <div class="menu-icon">☰</div>
-            <div class="logo">
-                <img src="youtube-logo.png" alt="YouTube" class="youtube-logo">
-            </div>
+  <header>
+    <div class="left-section">
+      <div class="menu-icon">☰</div>
+      <div class="logo">
+        <img src="youtube-logo.png" alt="YouTube" class="youtube-logo">
+      </div>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search">
+          <button class="search-icon" onclick="searchVideos()">🔍</button>
+          <button class="voice-search" onclick="voiceSearch()">🎤</button>
+      </div>
+
+      <div class="right-section">
+        <button class="icon-button">➕</button>
+        <button class="icon-button">🔔</button>
+        <div class="account">
+          <div class="profile-icon">S</div>
         </div>
+      </div>
+  </header>
 
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search">
-            <button class="search-icon" onclick="searchVideos()">🔍</button>
-            <button class="voice-search" onclick="voiceSearch()">🎤</button>
-        </div>
+  <div class="main-container">
+    <nav class="sidebar full-sidebar">
+      <div class="sidebar-section">
+        <h3>You</h3>
+          <ul>
+            <li>Library</li>
+            <li>History</li>
+            <li>Your Videos</li>
+            <li>Watch Later</li>
+          </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>Subscriptions</h3>
+          <ul>
+            <li>Channel 1</li>
+            <li>Channel 2</li>
+            <li>Channel 3</li>
+            <li>Channel 4</li>
+          </ul>
+      </div>
+      <div class="sidebar-section">
+        <h3>Explore</h3>
+          <ul>
+            <li>Trending</li>
+            <li>Music</li>
+            <li>Gaming</li>
+            <li>News</li>
+          </ul>
+      </div>
+    </nav>
 
-        <div class="right-section">
-            <button class="icon-button">➕</button> <!-- Upload icon -->
-            <button class="icon-button">🔔</button> <!-- Notifications icon -->
-            <div class="account">
-                <div class="profile-icon">S</div> <!-- Profile icon placeholder -->
-            </div>
-        </div>
-    </header>
+    <nav class="sidebar compact-sidebar">
+          <ul>
+            <li>
+              <img src="home-icon.png" alt="Home Icon" class="sidebar-icon" />
+              <span class="sidebar-text">Home</span>
+            </li>
+            <li>
+              <img src="shorts-icon.png" alt="Shorts Icon" class="sidebar-icon" />
+              <span class="sidebar-text">Shorts</span>
+            </li>
+            <li>
+              <img src="subscriptions-icon.png" alt="Subscriptions Icon" class="sidebar-icon" />
+              <span class="sidebar-text">Subscriptions</span>
+            </li>
+            <li>
+              <img src="you-icon.png" alt="You Icon" class="sidebar-icon" />
+              <span class="sidebar-text">You</span>
+            </li>
+          </ul>
+    </nav>
 
-    <!-- Main Content Container -->
-    <div class="main-container">
-        <!-- Sidebar Menu -->
-        <nav class="sidebar">
-            <div class="sidebar-section">
-                <h3>You</h3>
-                <ul>
-                    <li>Library</li>
-                    <li>History</li>
-                    <li>Your Videos</li>
-                    <li>Watch Later</li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <h3>Subscriptions</h3>
-                <ul>
-                    <li>Channel 1</li>
-                    <li>Channel 2</li>
-                    <li>Channel 3</li>
-                    <li>Channel 4</li>
-                </ul>
-            </div>
-            <div class="sidebar-section">
-                <h3>Explore</h3>
-                <ul>
-                    <li>Trending</li>
-                    <li>Music</li>
-                    <li>Gaming</li>
-                    <li>News</li>
-                </ul>
-            </div>
-        </nav>
+      <div class="content-area">
+        <section class="video-thumbnails">
+          <h2>Recommended Videos</h2>
+          <div class="thumbnails">
+          </div>
+        </section>
 
-        <!-- Content Area (Recommendations and Shorts) -->
-        <div class="content-area">
-            <section class="video-thumbnails">
-                <h2>Recommended Videos</h2>
-                <div class="thumbnails">
-                    <!-- Thumbnails are dynamically added here by JavaScript -->
-                </div>
-            </section>
-
-            <section class="shorts-section">
-                <h2>Shorts</h2>
-                <div class="shorts-container">
-                    <!-- Shorts are dynamically added here by JavaScript -->
-                </div>
-            </section>
-        </div>
+        <section class="shorts-section">
+          <h2>Shorts</h2>
+          <div class="shorts-container">
+          </div>
+        </section>
     </div>
+  </div>
 
     <script src="youtube.js"></script>
 </body>
