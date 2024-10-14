@@ -1,17 +1,15 @@
-/* Basic reset */
+/* Reset and base styling */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Updated background color */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Changed to white */
-    color: #000000; /* Set text color to black for better readability on white background */
+    background-color: #ffffff;
+    color: #000000;
 }
-
 
 /* Header styling */
 header {
@@ -23,7 +21,6 @@ header {
     color: #ffffff;
 }
 
-/* Left section for menu icon and logo */
 .left-section {
     display: flex;
     align-items: center;
@@ -35,17 +32,11 @@ header {
     cursor: pointer;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-}
-
 .youtube-logo {
     height: 24px;
     cursor: pointer;
 }
 
-/* Centered search bar styling */
 .search-bar {
     display: flex;
     align-items: center;
@@ -63,7 +54,6 @@ header {
     color: #ffffff;
     font-size: 1em;
     outline: none;
-    border-radius: 25px;
 }
 
 .search-icon,
@@ -73,27 +63,20 @@ header {
     color: #ffffff;
     font-size: 1.2em;
     cursor: pointer;
-    padding: 0 10px;
 }
 
-/* Right section for additional icons */
 .right-section {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.icon-button {
+.icon-button,
+.profile-icon {
     background: none;
-    border: none;
     color: #ffffff;
     font-size: 1.2em;
     cursor: pointer;
-}
-
-.account {
-    display: flex;
-    align-items: center;
 }
 
 .profile-icon {
@@ -104,164 +87,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
     font-weight: bold;
-    cursor: pointer;
 }
 
-/* Main content styling */
-main {
-    padding: 20px;
-    color: #ffffff;
-}
-
-.video-player {
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    background-color: #333;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-.video-player video {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.video-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.video-description {
-    margin-top: 5px;
-    color: #aaa;
-}
-
-/* Thumbnails styling */
-.video-thumbnails h2 {
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.thumbnails {
-    display: grid;
-    gap: 15px;
-    margin-top: 20px;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns for large screens (above 1500px) */
-}
-
-.thumbnail {
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.thumbnail img {
-    width: 100%;
-    height: 200px; /* Set a fixed height for uniform thumbnail size */
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    object-fit: cover; /* Ensures the image covers the entire area */
-}
-
-.thumbnail .info {
-    padding: 10px;
-    color: #000000;
-}
-
-.thumbnail .title {
-    font-size: 1em;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #000000;
-}
-
-.thumbnail .description {
-    font-size: 0.9em;
-    color: #555555;
-    margin-bottom: 5px;
-}
-
-.thumbnail .extra-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8em;
-    color: #888888;
-}
-
-.thumbnail .views,
-.thumbnail .timestamp {
-    font-size: 0.8em;
-    color: #888888;
-}
-
-/* Timestamp overlay in the bottom right corner of the image */
-.thumbnail .timestamp-overlay {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 2px 5px;
-    border-radius: 4px;
-    font-size: 0.75em;
-}
-
-/* Shorts Section Styling */
-.shorts-section {
-    margin-top: 40px;
-}
-
-.shorts-section h2 {
-    color: #000000;
-    margin-bottom: 10px;
-}
-
-.shorts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
-    gap: 15px; /* Spacing between shorts */
-    padding-bottom: 10px;
-}
-
-.short {
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    cursor: pointer;
-    width: 100%; /* Take full width available within the grid */
-}
-
-.short img {
-    width: 100%;
-    height: 300px; /* Fixed height for consistency */
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    object-fit: cover;
-}
-
-.short .title {
-    padding: 5px;
-    font-size: 0.9em;
-    color: #000000;
-}
-
-/* Main layout adjustments */
+/* Main layout */
 .main-container {
     display: flex;
     padding: 20px;
-    margin-top: 20px; /* Space between header and main content */
+    margin-top: 20px;
 }
 
-/* Sidebar styling */
 .sidebar {
     width: 200px;
     background-color: #f1f1f1;
@@ -273,12 +108,10 @@ main {
     font-size: 1em;
     color: #333;
     margin-bottom: 10px;
-    padding-top: 10px;
 }
 
 .sidebar ul {
     list-style-type: none;
-    padding-left: 0;
 }
 
 .sidebar li {
@@ -288,74 +121,96 @@ main {
     cursor: pointer;
 }
 
-.sidebar li:hover {
-    color: #000;
-}
-
-/* Content area styling */
+/* Content area */
 .content-area {
-    flex-grow: 1; /* Fills remaining space beside the sidebar */
+    flex-grow: 1;
     padding-left: 20px;
 }
 
-/* Header styling */
-header {
+.video-thumbnails h2,
+.shorts-section h2 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    row-gap: 30px;
+}
+
+.thumbnail {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
 }
 
-/* Centered Search Bar */
-.search-bar {
-    display: flex;
-    align-items: center;
+.thumbnail img {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
-.search-bar input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    width: 300px;
-    margin-right: 5px;
+.thumbnail .title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-/* Additional styles for recommended videos and shorts as in previous setup */
+.thumbnail .description {
+    font-size: 0.9em;
+    color: #555555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 
+.shorts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
 
+.short img {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
 
+.short .title {
+    font-size: 1em;
+    font-weight: bold;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* Responsive Design */
 @media (max-width: 1500px) {
-    .short:nth-child(n+6) {
-        display: none; /* Show only first 5 shorts in split-screen */
-    }
-}
-
-@media (min-width: 1201px) {
-    .short:nth-child(n+10) {
-        display: none; /* Show only first 9 shorts in full-screen */
-    }
-}
-
-/* Responsive Design: Change grid layout at different screen widths */
-@media (max-width: 1500px) {
     .thumbnails {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for split-screen mode (up to 1500px) */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .thumbnails {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens (tablet) */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
     .thumbnails {
-        grid-template-columns: 1fr; /* 1 column for very small screens (mobile) */
+        grid-template-columns: 1fr;
     }
 }
-

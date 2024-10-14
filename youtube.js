@@ -14,23 +14,20 @@ const videos = [
     { title: "Yoga for Beginners", description: "Fit & Healthy • 6 months ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "2M views", timestamp: "20:00" },
 ];
 
-// Function to display video thumbnails based on screen width
 function displayThumbnails() {
     const thumbnailsContainer = document.querySelector('.thumbnails');
-    thumbnailsContainer.innerHTML = ""; // Clear existing thumbnails
+    thumbnailsContainer.innerHTML = "";
 
-    const isSplitScreen = window.innerWidth <= 1500; // Define split-screen as width <= 1500px
-    const thumbnailsToShow = isSplitScreen ? 6 : videos.length; // Show 6 or all 12 thumbnails
+    const isSplitScreen = window.innerWidth <= 1500;
+    const thumbnailsToShow = isSplitScreen ? 6 : videos.length;
 
     videos.slice(0, thumbnailsToShow).forEach((video) => {
         const thumbnailElement = document.createElement('div');
         thumbnailElement.classList.add('thumbnail');
-        
-        // Add HTML for the video thumbnail with image at the top
         thumbnailElement.innerHTML = `
             <div style="position: relative;">
                 <img src="${video.src}" alt="${video.title}">
-                <div class="timestamp-overlay">${video.timestamp}</div> <!-- Timestamp overlay -->
+                <div class="timestamp-overlay">${video.timestamp}</div>
             </div>
             <div class="info">
                 <div class="title">${video.title}</div>
@@ -40,51 +37,38 @@ function displayThumbnails() {
                 </div>
             </div>
         `;
-
         thumbnailsContainer.appendChild(thumbnailElement);
     });
 }
 
-// Function to dynamically calculate and display shorts with updated sizing for alignment
 function displayShorts() {
     const shortsContainer = document.querySelector('.shorts-container');
-    shortsContainer.innerHTML = ""; // Clear existing shorts
+    shortsContainer.innerHTML = "";
 
-    // Calculate number of shorts to fit screen width
-    const shortWidth = 160 + 20; // Adjusted width + gap
+    const shortWidth = 160 + 20;
     const shortsToShow = Math.floor(window.innerWidth / shortWidth);
 
     videos.slice(0, shortsToShow).forEach((video) => {
         const shortElement = document.createElement('div');
         shortElement.classList.add('short');
-
-        // Add HTML for each short
         shortElement.innerHTML = `
             <img src="${video.src}" alt="${video.title}">
             <div class="title">${video.title}</div>
         `;
-
         shortsContainer.appendChild(shortElement);
     });
 }
 
-// Initial load of thumbnails and shorts, update on window resize
-window.onload = () => {
-    displayThumbnails();
-    displayShorts();
-};
-window.onresize = () => {
+window.onload = window.onresize = () => {
     displayThumbnails();
     displayShorts();
 };
 
-// Optional: Basic search functionality (just logs search terms)
 function searchVideos() {
     const searchInput = document.getElementById('search').value;
     console.log("Searching for:", searchInput);
 }
 
-// Optional: Placeholder for voice search functionality
 function voiceSearch() {
     alert("Voice search functionality coming soon!");
 }
