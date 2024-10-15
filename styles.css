@@ -1,359 +1,349 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* Header Styling */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: white;
-    color: #333;
-    position: relative;
-    height: 150px;
-    border-bottom: 2px solid #FF5A5F;
-    transition: all 0.3s ease-in-out; /* Smooth transition for minimizing */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  color: #333;
+  position: relative;
+  height: 150px;
+  border-bottom: 2px solid #FF5A5F;
+  transition: all 0.3s ease-in-out; /* Smooth transition for minimizing */
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .account-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .account-icon img {
-    width: 100%;
-    border-radius: 50%;
+  width: 100%;
+  border-radius: 50%;
 }
 
-/* Search Bar Container inside the header */
 .search-container {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
 }
 
 .search-bar {
-    display: flex;
-    gap: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .search-bar input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  flex: 1;
 }
 
 .search-bar button {
-    padding: 10px 20px;
-    background-color: #008489;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #008489;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .search-bar button:hover {
-    background-color: #006f69;
+  background-color: #006f69;
 }
 
-/* Minimized Search Bar */
 .minimized-search {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    gap: 20px;
-    transition: all 0.3s ease-in-out;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .minimized-search.sticky {
-    display: flex;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    padding: 0 10px;
-    height: 40px;
-    background-color: white;
+  display: flex;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  padding: 0 10px;
+  height: 40px;
+  background-color: white;
 }
 
 .minimized-search span {
-    font-weight: bold;
-    cursor: pointer;
-    color: #333;
-    transition: color 0.2s ease;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
 }
 
 .minimized-search span:hover {
-    color: #FF5A5F;
+  color: #FF5A5F;
 }
 
-/* Header states for minimized search */
 .header-minimized {
-    height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
 }
 
 .header-minimized .logo {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .header-minimized .account-icon {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .header-minimized .search-container {
-    top: 50%;
-    bottom: auto;
-    transform: translate(-50%, -50%);
-    width: auto;
+  top: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  width: auto;
 }
 
 .header-minimized .search-bar {
-    display: none;
+  display: none;
 }
 
 .header-minimized .minimized-search {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
 }
 
-/* Listings Grid */
 .listings {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .listing-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
 }
 
 .listing-card img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-/* Carousel */
 .carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .carousel-images {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
 }
 
 .carousel-images img {
-    width: 100%;
-    flex-shrink: 0;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .carousel-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
 }
 
 .carousel-container:hover .carousel-nav {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
-/* Dots for Carousel */
 .carousel-dots {
-    text-align: center;
-    margin-top: 10px;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
 }
 
 .carousel-dots .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: #ddd;
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .carousel-dots .active {
-    background-color: #333;
+  background-color: #333;
 }
 
-/* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7;
 }
 
-/* Place options (Icons for different property types) */
 .place-options-container {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    padding: 20px 0;
-    justify-content: center;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .place-options {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 0 20px;
-    max-width: 90%;
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 20px;
+  max-width: 90%;
+  justify-content: center;
 }
 
 .place-options::-webkit-scrollbar {
-    height: 8px;
+  height: 8px;
 }
 
 .place-options::-webkit-scrollbar-thumb {
-    background-color: #FF5A5F;
-    border-radius: 10px;
+  background-color: #FF5A5F;
+  border-radius: 10px;
 }
 
 .place-options::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 
 .option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    white-space: nowrap;
-    text-align: center;
-    cursor: pointer;
-    flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  flex: 0 0 auto;
 }
 
 .option img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
 }
 
 .option p {
-    font-size: 14px;
-    color: #555;
-    text-align: center;
-    transition: all 0.3s ease;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .option:hover p {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #333;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #333;
 }
 
-/* Arrow Styling (for carousel and icon scroll) */
 .arrow, .prev-arrow, .next-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px; /* Smaller circle size */
-    height: 30px; /* Smaller circle size */
-    border-radius: 50%;
-    border: 2px solid #FF5A5F;
-    background-color: transparent;
-    color: #FF5A5F;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #FF5A5F;
+  background-color: transparent;
+  color: #FF5A5F;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .arrow:hover, .prev-arrow:hover, .next-arrow:hover {
-    background-color: #FF5A5F;
-    color: white;
+  background-color: #FF5A5F;
+  color: white;
 }
 
-/* Positioning for carousel arrows */
 .carousel-nav .prev-arrow, .carousel-nav .next-arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .carousel-nav .prev-arrow {
-    left: 10px;
+  left: 10px;
 }
 
 .carousel-nav .next-arrow {
-    right: 10px;
+  right: 10px;
 }
 
 /* Responsive for smaller screens */
 @media (max-width: 768px) {
-    .place-options {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
-        scroll-behavior: smooth;
-    }
+  .place-options {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
 
-    .option {
-        flex: 0 0 auto;
-        margin-right: 10px;
-    }
+  .option {
+    flex: 0 0 auto;
+    margin-right: 10px;
+  }
 }
