@@ -17,28 +17,41 @@ function displayThumbnails() {
   const thumbnailsContainer = document.querySelector('.thumbnails');
   thumbnailsContainer.innerHTML = "";
 
-  const isSplitScreen = window.innerWidth <= 1500;
-  const thumbnailsToShow = isSplitScreen ? 6 : videos.length;
+  // Check screen width and adjust the number of thumbnails accordingly
+  const screenWidth = window.innerWidth;
+  let thumbnailsToShow;
 
+  if (screenWidth > 1500) {
+    thumbnailsToShow = 12; // Show 6 thumbnails for large screens
+  } else if (screenWidth <= 1500 && screenWidth > 768) {
+    thumbnailsToShow = 6; // Show 3 thumbnails for medium screens
+  } else if (screenWidth <= 768 && screenWidth > 480) {
+    thumbnailsToShow = 2; // Show 2 thumbnails for smaller screens
+  } else {
+    thumbnailsToShow = 1; // Show 1 thumbnail for very small screens
+  }
+
+  // Only display the necessary number of thumbnails
   videos.slice(0, thumbnailsToShow).forEach((video) => {
     const thumbnailElement = document.createElement('div');
-      thumbnailElement.classList.add('thumbnail');
-      thumbnailElement.innerHTML = `
-        <div style="position: relative;">
-          <img src="${video.src}" alt="${video.title}">
-          <div class="timestamp-overlay">${video.timestamp}</div>
+    thumbnailElement.classList.add('thumbnail');
+    thumbnailElement.innerHTML = `
+      <div style="position: relative;">
+        <img src="${video.src}" alt="${video.title}">
+        <div class="timestamp-overlay">${video.timestamp}</div>
+      </div>
+      <div class="info">
+        <div class="title">${video.title}</div>
+        <div class="description">${video.description}</div>
+        <div class="extra-info">
+          <span class="views">${video.views}</span>
         </div>
-        <div class="info">
-          <div class="title">${video.title}</div>
-          <div class="description">${video.description}</div>
-          <div class="extra-info">
-              <span class="views">${video.views}</span>
-          </div>
-        </div>
-        `;
-      thumbnailsContainer.appendChild(thumbnailElement);
-    });
+      </div>
+    `;
+    thumbnailsContainer.appendChild(thumbnailElement);
+  });
 }
+
 
 function displayShorts() {
   const shortsContainer = document.querySelector('.shorts-container');

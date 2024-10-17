@@ -174,7 +174,7 @@ header {
 
 .thumbnails {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(6, 1fr); /* 6 videos per row for large screens */
   gap: 15px;
   row-gap: 30px;
 }
