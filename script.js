@@ -5,21 +5,23 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Apartment+Image+2',
       'https://via.placeholder.com/400x300?text=Apartment+Image+3'
     ],
-    title: 'Modern Apartment',
     location: 'New York, USA',
-    price: '$120/night',
-    type: 'Apartment'
+    distance: '5 miles away',
+    availableDate: 'Oct 25, 2024',
+    cost: '$120 night',
+    rating: '4.5'
   },
   {
     images: [
-        'https://via.placeholder.com/400x300?text=Cottage+Image+1',
-        'https://via.placeholder.com/400x300?text=Cottage+Image+2',
-        'https://via.placeholder.com/400x300?text=Cottage+Image+3'
+      'https://via.placeholder.com/400x300?text=Cottage+Image+1',
+      'https://via.placeholder.com/400x300?text=Cottage+Image+2',
+      'https://via.placeholder.com/400x300?text=Cottage+Image+3'
     ],
-    title: 'Cozy Cottage',
     location: 'San Francisco, USA',
-    price: '$200/night',
-    type: 'Cottage'
+    distance: '15 miles away',
+    availableDate: 'Nov 1, 2024',
+    cost: '$200 night',
+    rating: '4.7'
   },
   {
     images: [
@@ -27,10 +29,11 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Villa+Image+2',
       'https://via.placeholder.com/400x300?text=Villa+Image+3'
     ],
-    title: 'Beachfront Villa',
     location: 'Miami, USA',
-    price: '$450/night',
-    type: 'Villa'
+    distance: '3 miles away',
+    availableDate: 'Oct 20, 2024',
+    cost: '$450 night',
+    rating: '4.8'
   },
   {
     images: [
@@ -38,10 +41,11 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Cabin+Image+2',
       'https://via.placeholder.com/400x300?text=Cabin+Image+3'
     ],
-    title: 'Rustic Cabin',
     location: 'Lake Tahoe, USA',
-    price: '$300/night',
-    type: 'Cabin'
+    distance: '10 miles away',
+    availableDate: 'Nov 5, 2024',
+    cost: '$300 night',
+    rating: '4.6'
   },
   {
     images: [
@@ -49,10 +53,11 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Hostel+Image+2',
       'https://via.placeholder.com/400x300?text=Hostel+Image+3'
     ],
-    title: 'City Hostel',
     location: 'Berlin, Germany',
-    price: '$40/night',
-    type: 'Hostel'
+    distance: '20 miles away',
+    availableDate: 'Oct 30, 2024',
+    cost: '$40 night',
+    rating: '4.2'
   },
   {
     images: [
@@ -60,10 +65,11 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Bungalow+Image+2',
       'https://via.placeholder.com/400x300?text=Bungalow+Image+3'
     ],
-    title: 'Luxury Bungalow',
     location: 'Bora Bora, French Polynesia',
-    price: '$600/night',
-    type: 'Bungalow'
+    distance: '7 miles away',
+    availableDate: 'Dec 1, 2024',
+    cost: '$600 night',
+    rating: '4.9'
   },
   {
     images: [
@@ -71,10 +77,11 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Treehouse+Image+2',
       'https://via.placeholder.com/400x300?text=Treehouse+Image+3'
     ],
-    title: 'Treehouse Retreat',
     location: 'Asheville, USA',
-    price: '$250/night',
-    type: 'Treehouse'
+    distance: '12 miles away',
+    availableDate: 'Oct 28, 2024',
+    cost: '$250 night',
+    rating: '4.7'
   },
   {
     images: [
@@ -82,10 +89,11 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Farmstay+Image+2',
       'https://via.placeholder.com/400x300?text=Farmstay+Image+3'
     ],
-    title: 'Farmstay Experience',
     location: 'Tuscany, Italy',
-    price: '$180/night',
-    type: 'Farmstay'
+    distance: '30 miles away',
+    availableDate: 'Nov 10, 2024',
+    cost: '$180 night',
+    rating: '4.5'
   },
   {
     images: [
@@ -93,10 +101,11 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Tiny+House+Image+2',
       'https://via.placeholder.com/400x300?text=Tiny+House+Image+3'
     ],
-    title: 'Tiny House Adventure',
     location: 'Portland, USA',
-    price: '$90/night',
-    type: 'Tiny House'
+    distance: '2 miles away',
+    availableDate: 'Oct 22, 2024',
+    cost: '$90 night',
+    rating: '4.3'
   },
   {
     images: [
@@ -104,12 +113,38 @@ const listingsData = [
       'https://via.placeholder.com/400x300?text=Boat+Image+2',
       'https://via.placeholder.com/400x300?text=Boat+Image+3'
     ],
-    title: 'Houseboat on the Lake',
     location: 'Amsterdam, Netherlands',
-    price: '$320/night',
-    type: 'Boat'
+    distance: '8 miles away',
+    availableDate: 'Nov 2, 2024',
+    cost: '$320 night',
+    rating: '4.6'
+  },
+  {
+    images: [
+      'https://via.placeholder.com/400x300?text=Penthouse+Image+1',
+      'https://via.placeholder.com/400x300?text=Penthouse+Image+2',
+      'https://via.placeholder.com/400x300?text=Penthouse+Image+3'
+    ],
+    location: 'Los Angeles, USA',
+    distance: '5 miles away',
+    availableDate: 'Nov 15, 2024',
+    cost: '$700 night',
+    rating: '4.8'
+  },
+  {
+    images: [
+      'https://via.placeholder.com/400x300?text=Castle+Image+1',
+      'https://via.placeholder.com/400x300?text=Castle+Image+2',
+      'https://via.placeholder.com/400x300?text=Castle+Image+3'
+    ],
+    location: 'Edinburgh, Scotland',
+    distance: '25 miles away',
+    availableDate: 'Dec 5, 2024',
+    cost: '$950 night',
+    rating: '5.0'
   }
 ];
+
 
 function displayListings(listings) {
   const listingsContainer = document.getElementById('listings');
@@ -117,7 +152,7 @@ function displayListings(listings) {
 
   listings.forEach((listing) => {
     const imagesHTML = listing.images.map((img, i) =>
-      `<img src="${img}" alt="Image ${i + 1}" />`
+      `<img src="${img}" alt="Image ${i + 1}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;" />`
     ).join('');
 
     const dotsHTML = listing.images.map((_, i) =>
@@ -127,27 +162,37 @@ function displayListings(listings) {
     const listingCard = `
       <div class="listing-card">
         <div class="carousel-container">
-            <div class="carousel-images">
-              ${imagesHTML}
-            </div>
-            <div class="carousel-nav">
-              <span class="prev-arrow">&#9664;</span> <!-- Left Arrow -->
-              <span class="next-arrow">&#9654;</span> <!-- Right Arrow -->
-            </div>
-            <div class="carousel-dots">
-              ${dotsHTML}
-            </div>
+          <div class="carousel-images">
+            ${imagesHTML}
           </div>
-            <h3>${listing.title}</h3>
-            <p>${listing.location}</p>
-            <p>${listing.price}</p>
+          <div class="carousel-nav">
+            <span class="prev-arrow">&#9664;</span> <!-- Left Arrow -->
+            <span class="next-arrow">&#9654;</span> <!-- Right Arrow -->
           </div>
-      `;
-      listingsContainer.innerHTML += listingCard;
+          <div class="carousel-dots">
+            ${dotsHTML}
+          </div>
+        </div>
+        <div class="location-rating">
+          <h3>${listing.location}</h3>
+          <span class="rating">&#9733; ${listing.rating}</span> <!-- Black star icon with rating -->
+        </div>
+        <p>${listing.distance}</p>
+        <p>${listing.availableDate}</p>
+        <p><strong>${listing.cost.split(' ')[0]}</strong> night</p>
+      </div>
+    `;
+    listingsContainer.innerHTML += listingCard;
   });
 
   initializeCarousels();
 }
+
+
+
+
+
+
 
 function initializeCarousels() {
   document.querySelectorAll('.listing-card').forEach(card => {

@@ -6,6 +6,8 @@
 
 body {
   font-family: Arial, sans-serif;
+  overflow-y: auto; /* Enables vertical scrolling */
+  height: 100%;
 }
 
 /* Header Styling */
@@ -156,14 +158,12 @@ header {
 
 .listings {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(4, 1fr); /* Default to 2 items per row on smaller screens */
+  gap: 10px; /* Smaller gap between listing cards */
+  padding: 10px; /* Reduced padding around the listings container */
 }
 
 .listing-card {
-  border: 1px solid #ccc;
-  border-radius: 10px;
   overflow: hidden;
   text-align: center;
 }
@@ -173,21 +173,71 @@ header {
   height: auto;
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+.listing-card h3 {
+  font-size: 15px; /* Adjust font size as needed */
+  font-weight: bold;
+  margin: 5px 0;
+  white-space: nowrap; /* Prevents line wrap */
+  width: 100%; /* Ensures text takes the full width of the card */
 }
 
+.listing-card p {
+  font-size: 0.9rem; /* Smaller text for details */
+  margin: 2px 0; /* Less margin to fit content */
+}
+
+/* Align text to the left under the images */
+.listing-card h3,
+.listing-card p {
+  text-align: left;
+  padding-left: 0; /* Align with the image's left edge */
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px; /* Match the width of the image container */
+}
+
+/* Flexbox container for location and rating */
+.location-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* Style for the star rating */
+.rating {
+  font-size: 0.9rem;
+  color: #000; /* Set color to black */
+}
+
+
+/* Responsive carousel container that adjusts to screen width */
+.carousel-container {
+  width: 100%; /* Full width of parent container */
+  max-width: 500px; /* Set a maximum width for larger screens */
+  aspect-ratio: 1; /* Keeps the container square */
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 10px;
+}
+
+/* Ensure carousel images align in one row but only show one at a time */
 .carousel-images {
   display: flex;
   transition: transform 0.3s ease-in-out;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
 }
 
+/* Ensure images fill the responsive container */
 .carousel-images img {
   width: 100%;
-  flex-shrink: 0;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
 
 .carousel-nav {
   position: absolute;
@@ -244,18 +294,23 @@ footer {
   overflow: hidden;
 }
 
+/* Container for place options with hidden scrollbar */
 .place-options {
   display: flex;
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: auto; /* Horizontal scroll only */
   scroll-behavior: smooth;
   padding: 0 20px;
   max-width: 90%;
-  justify-content: center;
 }
 
+/* Hide scrollbar for all browsers */
+.place-options {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .place-options::-webkit-scrollbar {
-  height: 8px;
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .place-options::-webkit-scrollbar-thumb {
@@ -283,6 +338,14 @@ footer {
   margin-bottom: 5px;
 }
 
+/* Set smaller square images */
+.carousel-images img {
+  width: 150px; /* Smaller fixed width */
+  height: 150px; /* Smaller fixed height */
+  object-fit: cover; /* Ensures image content fills square */
+  border-radius: 10px; /* Rounded corners */
+}
+
 .option p {
   font-size: 14px;
   color: #555;
@@ -296,6 +359,9 @@ footer {
   color: #333;
 }
 
+
+
+/* Base style for the arrows */
 .arrow, .prev-arrow, .next-arrow {
   display: flex;
   align-items: center;
@@ -303,16 +369,55 @@ footer {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: 2px solid #FF5A5F;
-  background-color: transparent;
-  color: #FF5A5F;
+  background-color: rgba(255, 255, 255, 0.4); /* Translucent background */
+  color: rgba(0, 0, 0, 0.6); /* Slightly dark arrow color */
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
 }
 
+/* Hover effect with white background and two-line arrows */
 .arrow:hover, .prev-arrow:hover, .next-arrow:hover {
-  background-color: #FF5A5F;
-  color: white;
+  background-color: white; /* Solid white background on hover */
+  color: rgba(0, 0, 0, 0.8); /* Darker arrow color */
+}
+
+/* Custom arrows as two lines for left and right */
+.prev-arrow::before,
+.next-arrow::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor; /* Inherit color from the arrow */
+  transform: rotate(45deg);
+}
+
+.prev-arrow::after,
+.next-arrow::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: currentColor; /* Inherit color from the arrow */
+  transform: rotate(-45deg);
+}
+
+/* Adjust the arrow directions */
+.prev-arrow::before {
+  transform: rotate(-45deg); /* Left diagonal line */
+}
+
+.prev-arrow::after {
+  transform: rotate(45deg); /* Right diagonal line */
+}
+
+.next-arrow::before {
+  transform: rotate(45deg); /* Right diagonal line */
+}
+
+.next-arrow::after {
+  transform: rotate(-45deg); /* Left diagonal line */
 }
 
 .carousel-nav .prev-arrow, .carousel-nav .next-arrow {
@@ -333,17 +438,30 @@ footer {
   right: 10px;
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 768px) {
-  .place-options {
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+/* Medium screens: 4 items per row */
+@media (min-width: 768px) {
+  .listings {
+    grid-template-columns: repeat(4, 1fr);
   }
+}
 
-  .option {
-    flex: 0 0 auto;
-    margin-right: 10px;
+/* Large screens: 6 items per row */
+@media (min-width: 1500px) {
+  .listings {
+    grid-template-columns: repeat(6, 1fr);
   }
+}
+
+/* Adjust listing card layout */
+.listing-card {
+  padding: 10px; /* Reduced padding inside each card */
+  border: none; /* Ensure no border */
+  text-align: left;
+}
+
+/* Align details directly under the image with less spacing */
+.listing-card h3,
+.listing-card p {
+  margin: 5px 0; /* Minimal margin around text */
+  padding: 0;
 }

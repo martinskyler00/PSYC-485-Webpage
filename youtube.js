@@ -1,16 +1,16 @@
 const videos = [
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.5M views", timestamp: "27:15" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.6M views", timestamp: "27:15" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "39K views", timestamp: "14:48" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "529K views • 1 year ago", timestamp: "00:07" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "143 views", timestamp: "17:53" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "89K views", timestamp: "14:35" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "500K views", timestamp: "8:20" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.2M views", timestamp: "5:40" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "3.4M views", timestamp: "12:05" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1M views", timestamp: "15:45" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "900K views", timestamp: "9:50" },
-    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "2M views", timestamp: "20:00" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "27:15" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "27:15" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "14:48" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "00:07" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "17:53" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "14:35" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "8:20" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "5:40" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "12:05" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "15:45" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "9:50" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "views", timestamp: "20:00" },
 ];
 
 function displayThumbnails() {
