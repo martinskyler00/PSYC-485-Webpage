@@ -1,16 +1,16 @@
 const videos = [
-    { title: "Watch The Old Man Now", description: "Sponsored - Hulu", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.5M views", timestamp: "27:15" },
-    { title: "JUMPING OFF BUILDINGS!", description: "MM7Games • 8 years ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.6M views", timestamp: "27:15" },
-    { title: "Bluecoats 2022 Tuba Cam", description: "Futo Fujikura • 2 years ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "39K views", timestamp: "14:48" },
-    { title: "It’s REESE'S Season", description: "Sponsored - Reeses", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "529K views • 1 year ago", timestamp: "00:07" },
-    { title: "Clowning KSI Song", description: "PresidentLightSkin • 3 days ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "143 views", timestamp: "17:53" },
-    { title: "Impractical Jokers Funniest Moments", description: "Koala Buddy • 7 days ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "89K views", timestamp: "14:35" },
-    { title: "Amazing Drone Footage", description: "Drone World • 1 month ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "500K views", timestamp: "8:20" },
-    { title: "10 Tips for Better Sleep", description: "Health Today • 1 week ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.2M views", timestamp: "5:40" },
-    { title: "World’s Fastest Cars", description: "Car Mania • 2 months ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "3.4M views", timestamp: "12:05" },
-    { title: "Beginner’s Guide to Investing", description: "Finance Explained • 1 year ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1M views", timestamp: "15:45" },
-    { title: "Top 10 Places to Visit", description: "Travel Guide • 3 weeks ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "900K views", timestamp: "9:50" },
-    { title: "Yoga for Beginners", description: "Fit & Healthy • 6 months ago", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "2M views", timestamp: "20:00" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.5M views", timestamp: "27:15" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.6M views", timestamp: "27:15" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "39K views", timestamp: "14:48" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "529K views • 1 year ago", timestamp: "00:07" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "143 views", timestamp: "17:53" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "89K views", timestamp: "14:35" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "500K views", timestamp: "8:20" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1.2M views", timestamp: "5:40" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "3.4M views", timestamp: "12:05" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "1M views", timestamp: "15:45" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "900K views", timestamp: "9:50" },
+    { title: "Title Placeholder", description: "Description Placeholder", src: "https://via.placeholder.com/300x200.png?text=Video+Placeholder", views: "2M views", timestamp: "20:00" },
 ];
 
 function displayThumbnails() {
