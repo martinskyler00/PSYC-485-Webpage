@@ -1,11 +1,11 @@
 const listingsData = [
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Apartment+Image+1',
+      'imagefile1/Dollop1.png',
       'https://via.placeholder.com/400x300?text=Apartment+Image+2',
       'https://via.placeholder.com/400x300?text=Apartment+Image+3'
     ],
-    location: 'New York, USA',
+    location: 'Dollop Coffee Co.',
     distance: '5 miles away',
     availableDate: 'Oct 25, 2024',
     cost: '$120 night',
@@ -13,11 +13,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Cottage+Image+1',
+      'imagefile1/Intelligentsia1.png',
       'https://via.placeholder.com/400x300?text=Cottage+Image+2',
       'https://via.placeholder.com/400x300?text=Cottage+Image+3'
     ],
-    location: 'San Francisco, USA',
+    location: 'Intelligentsia',
     distance: '15 miles away',
     availableDate: 'Nov 1, 2024',
     cost: '$200 night',
@@ -25,11 +25,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Villa+Image+1',
+      'imagefile1/Peets1.png',
       'https://via.placeholder.com/400x300?text=Villa+Image+2',
       'https://via.placeholder.com/400x300?text=Villa+Image+3'
     ],
-    location: 'Miami, USA',
+    location: 'Peets Coffee',
     distance: '3 miles away',
     availableDate: 'Oct 20, 2024',
     cost: '$450 night',
@@ -37,11 +37,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Cabin+Image+1',
+      'imagefile1/Christkindl1.jpg',
       'https://via.placeholder.com/400x300?text=Cabin+Image+2',
       'https://via.placeholder.com/400x300?text=Cabin+Image+3'
     ],
-    location: 'Lake Tahoe, USA',
+    location: 'Christkindl Market Chicago',
     distance: '10 miles away',
     availableDate: 'Nov 5, 2024',
     cost: '$300 night',
@@ -49,11 +49,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Hostel+Image+1',
+      'imagefile1/Jacks1.jpg',
       'https://via.placeholder.com/400x300?text=Hostel+Image+2',
       'https://via.placeholder.com/400x300?text=Hostel+Image+3'
     ],
-    location: 'Berlin, Germany',
+    location: 'Jacks Pumpkin Pop Up',
     distance: '20 miles away',
     availableDate: 'Oct 30, 2024',
     cost: '$40 night',
@@ -61,11 +61,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Bungalow+Image+1',
+      'imagefile1/offshore1.jpg',
       'https://via.placeholder.com/400x300?text=Bungalow+Image+2',
       'https://via.placeholder.com/400x300?text=Bungalow+Image+3'
     ],
-    location: 'Bora Bora, French Polynesia',
+    location: 'Offshore Rooftop',
     distance: '7 miles away',
     availableDate: 'Dec 1, 2024',
     cost: '$600 night',
@@ -73,11 +73,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Treehouse+Image+1',
+      'imagefile1/soldier1.jpg',
       'https://via.placeholder.com/400x300?text=Treehouse+Image+2',
       'https://via.placeholder.com/400x300?text=Treehouse+Image+3'
     ],
-    location: 'Asheville, USA',
+    location: 'Soldier Field',
     distance: '12 miles away',
     availableDate: 'Oct 28, 2024',
     cost: '$250 night',
