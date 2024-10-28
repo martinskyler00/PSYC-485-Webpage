@@ -1,7 +1,7 @@
 const listingsData = [
   {
     images: [
-      'imagefile1/Dollop1.png',
+      'imagefile1/Dollop1.jpg',
       'https://via.placeholder.com/400x300?text=Apartment+Image+2',
       'https://via.placeholder.com/400x300?text=Apartment+Image+3'
     ],
@@ -13,7 +13,7 @@ const listingsData = [
   },
   {
     images: [
-      'imagefile1/Intelligentsia1.png',
+      'imagefile1/Intelligentsia1.jpg',
       'https://via.placeholder.com/400x300?text=Cottage+Image+2',
       'https://via.placeholder.com/400x300?text=Cottage+Image+3'
     ],
@@ -25,7 +25,7 @@ const listingsData = [
   },
   {
     images: [
-      'imagefile1/Peets1.png',
+      'imagefile1/Peets1.jpg',
       'https://via.placeholder.com/400x300?text=Villa+Image+2',
       'https://via.placeholder.com/400x300?text=Villa+Image+3'
     ],
