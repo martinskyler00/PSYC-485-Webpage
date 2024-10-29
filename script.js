@@ -1,6 +1,7 @@
 const listingsData = [
   {
-    images: [,
+    images: [
+      'imagefile1/dollop4.webp',
       'imagefile2/dollop2.jpg',
       'imagefile3/dollop3.jpg'
     ],
