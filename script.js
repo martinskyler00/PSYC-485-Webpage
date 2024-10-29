@@ -1,7 +1,7 @@
 const listingsData = [
   {
     images: [
-      'imagefile1/dollop1.jpg',
+      'imagefile1/dollop4.webp',
       'imagefile2/dollop2.jpg',
       'imagefile3/dollop3.jpg'
     ],
@@ -13,7 +13,7 @@ const listingsData = [
   },
   {
     images: [
-      'imagefile1/intelligentsia1.jpg',
+      'imagefile1/intelligentsia4.jpg',
       'imagefile2/intelligentsia2.jpg',
       'imagefile3/intelligentsia3.jpg'
     ],
@@ -25,7 +25,7 @@ const listingsData = [
   },
   {
     images: [
-      'imagefile1/peets1.jpg',
+      'imagefile1/peets4.jpg',
       'imagefile2/peets2.jpg',
       'imagefile3/peets3.jpg'
     ],
