@@ -9,7 +9,8 @@ const listingsData = [
     distance: '5 miles away',
     availableDate: 'Oct 25, 2024',
     cost: '$120 night',
-    rating: '4.5'
+    rating: '4.5',
+    category: 'coffee'
   },
   {
     images: [
@@ -21,7 +22,8 @@ const listingsData = [
     distance: '15 miles away',
     availableDate: 'Nov 1, 2024',
     cost: '$200 night',
-    rating: '4.7'
+    rating: '4.7',
+    category: 'coffee'
   },
   {
     images: [
@@ -33,7 +35,8 @@ const listingsData = [
     distance: '3 miles away',
     availableDate: 'Oct 20, 2024',
     cost: '$450 night',
-    rating: '4.8'
+    rating: '4.8',
+    category: 'coffee'
   },
   {
     images: [
@@ -45,7 +48,8 @@ const listingsData = [
     distance: '10 miles away',
     availableDate: 'Nov 5, 2024',
     cost: '$300 night',
-    rating: '4.6'
+    rating: '4.6',
+    category: 'seasonal'
   },
   {
     images: [
@@ -57,7 +61,8 @@ const listingsData = [
     distance: '20 miles away',
     availableDate: 'Oct 30, 2024',
     cost: '$40 night',
-    rating: '4.2'
+    rating: '4.2',
+    category: 'seasonal'
   },
   {
     images: [
@@ -69,7 +74,8 @@ const listingsData = [
     distance: '7 miles away',
     availableDate: 'Dec 1, 2024',
     cost: '$600 night',
-    rating: '4.9'
+    rating: '4.9',
+    category: 'restaurant'
   },
   {
     images: [
@@ -81,7 +87,8 @@ const listingsData = [
     distance: '12 miles away',
     availableDate: 'Oct 28, 2024',
     cost: '$250 night',
-    rating: '4.7'
+    rating: '4.7',
+    category: 'attraction'
   },
   {
     images: [
@@ -93,7 +100,8 @@ const listingsData = [
     distance: '30 miles away',
     availableDate: 'Nov 10, 2024',
     cost: '$180 night',
-    rating: '4.5'
+    rating: '4.5',
+    category: 'bars'
   },
   {
     images: [
@@ -105,7 +113,8 @@ const listingsData = [
     distance: '2 miles away',
     availableDate: 'Oct 22, 2024',
     cost: '$90 night',
-    rating: '4.3'
+    rating: '4.3',
+    category: 'museum'
   },
   {
     images: [
@@ -117,7 +126,8 @@ const listingsData = [
     distance: '8 miles away',
     availableDate: 'Nov 2, 2024',
     cost: '$320 night',
-    rating: '4.6'
+    rating: '4.6',
+    category: 'attractions'
   },
   {
     images: [
@@ -129,7 +139,8 @@ const listingsData = [
     distance: '5 miles away',
     availableDate: 'Nov 15, 2024',
     cost: '$700 night',
-    rating: '4.8'
+    rating: '4.8',
+    category: 'restaurant'
   },
   {
     images: [
@@ -141,7 +152,80 @@ const listingsData = [
     distance: '25 miles away',
     availableDate: 'Dec 5, 2024',
     cost: '$950 night',
-    rating: '5.0'
+    rating: '5.0',
+    category: 'museum'
+  },
+  {
+    images: [
+      'imagefile1/dollop4.webp',
+      'imagefile2/dollop2.jpg',
+      'imagefile3/dollop3.jpg'
+    ],
+    location: 'Sample',
+    distance: '5 miles away',
+    availableDate: 'Oct 25, 2024',
+    cost: '$120 night',
+    rating: '4.5'
+  },
+  {
+    images: [
+      'imagefile1/intelligentsia4.jpg',
+      'imagefile2/intelligentsia2.jpg',
+      'imagefile3/intelligentsia3.jpg'
+    ],
+    location: 'Sample',
+    distance: '15 miles away',
+    availableDate: 'Nov 1, 2024',
+    cost: '$200 night',
+    rating: '4.7'
+  },
+  {
+    images: [
+      'imagefile1/peets4.jpg',
+      'imagefile2/peets2.jpg',
+      'imagefile3/peets3.jpg'
+    ],
+    location: 'Sample',
+    distance: '3 miles away',
+    availableDate: 'Oct 20, 2024',
+    cost: '$450 night',
+    rating: '4.8'
+  },
+  {
+    images: [
+      'imagefile1/Christkindl1.jpg',
+      'imagefile2/Christkindl2.jpg',
+      'imagefile3/Christkindl3.jpg'
+    ],
+    location: 'Sample',
+    distance: '10 miles away',
+    availableDate: 'Nov 5, 2024',
+    cost: '$300 night',
+    rating: '4.6'
+  },
+  {
+    images: [
+      'imagefile1/Jacks1.jpg',
+      'imagefile2/jacks2.webp',
+      'imagefile3/jacks3.webp'
+    ],
+    location: 'Sample',
+    distance: '20 miles away',
+    availableDate: 'Oct 30, 2024',
+    cost: '$40 night',
+    rating: '4.2'
+  },
+  {
+    images: [
+      'imagefile1/offshore1.jpg',
+      'imagefile2/offshore2.jpg',
+      'imagefile3/offshore3.jpg'
+    ],
+    location: 'Sample',
+    distance: '7 miles away',
+    availableDate: 'Dec 1, 2024',
+    cost: '$600 night',
+    rating: '4.9'
   }
 ];
 
@@ -188,6 +272,22 @@ function displayListings(listings) {
   initializeCarousels();
 }
 
+function filterListings(category) {
+  const filteredListings = listingsData.filter(listing => listing.category === category);
+  displayListings(filteredListings);
+}
+
+// Event listener for each icon to trigger the filter
+document.querySelectorAll('.place-options .option').forEach(option => {
+  option.addEventListener('click', () => {
+    const category = option.getAttribute('data-category');
+    filterListings(category);
+  });
+});
+
+window.onload = function() {
+  displayListings(listingsData); // Display all listings initially
+};
 
 
 
