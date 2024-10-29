@@ -2,8 +2,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/dollop1.jpg',
-      'https://via.placeholder.com/400x300?text=Apartment+Image+2',
-      'https://via.placeholder.com/400x300?text=Apartment+Image+3'
+      'imagefile2/dollop2.jpg',
+      'imagefile3/dollop3.jpg'
     ],
     location: 'Dollop Coffee Co.',
     distance: '5 miles away',
@@ -14,8 +14,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/intelligentsia1.jpg',
-      'https://via.placeholder.com/400x300?text=Cottage+Image+2',
-      'https://via.placeholder.com/400x300?text=Cottage+Image+3'
+      'imagefile2/intelligentsia2.jpg',
+      'imagefile3/intelligentsia3.jpg'
     ],
     location: 'Intelligentsia',
     distance: '15 miles away',
@@ -26,8 +26,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/peets1.jpg',
-      'https://via.placeholder.com/400x300?text=Villa+Image+2',
-      'https://via.placeholder.com/400x300?text=Villa+Image+3'
+      'imagefile2/peets2.jpg',
+      'imagefile3/peets3.jpg'
     ],
     location: 'Peets Coffee',
     distance: '3 miles away',
@@ -38,8 +38,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/Christkindl1.jpg',
-      'https://via.placeholder.com/400x300?text=Cabin+Image+2',
-      'https://via.placeholder.com/400x300?text=Cabin+Image+3'
+      'imagefile2/Christkindl2.jpg',
+      'imagefile3/Christkindl3.jpg'
     ],
     location: 'Christkindl Market Chicago',
     distance: '10 miles away',
@@ -50,8 +50,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/Jacks1.jpg',
-      'https://via.placeholder.com/400x300?text=Hostel+Image+2',
-      'https://via.placeholder.com/400x300?text=Hostel+Image+3'
+      'imagefile2/jacks2.webp',
+      'imagefile3/jacks3.webp'
     ],
     location: 'Jacks Pumpkin Pop Up',
     distance: '20 miles away',
@@ -62,8 +62,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/offshore1.jpg',
-      'https://via.placeholder.com/400x300?text=Bungalow+Image+2',
-      'https://via.placeholder.com/400x300?text=Bungalow+Image+3'
+      'imagefile2/offshore2.jpg',
+      'imagefile3/offshore3.jpg'
     ],
     location: 'Offshore Rooftop',
     distance: '7 miles away',
@@ -74,8 +74,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/soldier1.jpg',
-      'https://via.placeholder.com/400x300?text=Treehouse+Image+2',
-      'https://via.placeholder.com/400x300?text=Treehouse+Image+3'
+      'imagefile2/soldier2.jpg',
+      'imagefile3/soldier3.webp'
     ],
     location: 'Soldier Field',
     distance: '12 miles away',
@@ -85,11 +85,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Farmstay+Image+1',
-      'https://via.placeholder.com/400x300?text=Farmstay+Image+2',
-      'https://via.placeholder.com/400x300?text=Farmstay+Image+3'
+      'imagefile1/marias1.jpg',
+      'imagefile2/marias2.webp',
+      'imagefile3/marias3.jpg'
     ],
-    location: 'Tuscany, Italy',
+    location: 'Marias Packaged Goods and Community Bar',
     distance: '30 miles away',
     availableDate: 'Nov 10, 2024',
     cost: '$180 night',
@@ -97,11 +97,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Tiny+House+Image+1',
-      'https://via.placeholder.com/400x300?text=Tiny+House+Image+2',
-      'https://via.placeholder.com/400x300?text=Tiny+House+Image+3'
+      'imagefile1/artinstitute1.jpg',
+      'imagefile2/artinstitute2.jpg',
+      'imagefile3/artinstitute3.webp'
     ],
-    location: 'Portland, USA',
+    location: 'The Art Institute of Chicago',
     distance: '2 miles away',
     availableDate: 'Oct 22, 2024',
     cost: '$90 night',
@@ -109,11 +109,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Boat+Image+1',
-      'https://via.placeholder.com/400x300?text=Boat+Image+2',
-      'https://via.placeholder.com/400x300?text=Boat+Image+3'
+      'imagefile1/pier1.jpg',
+      'imagefile2/pier2.jpg',
+      'imagefile3/pier3.jpg'
     ],
-    location: 'Amsterdam, Netherlands',
+    location: 'Navy Pier',
     distance: '8 miles away',
     availableDate: 'Nov 2, 2024',
     cost: '$320 night',
@@ -121,11 +121,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Penthouse+Image+1',
-      'https://via.placeholder.com/400x300?text=Penthouse+Image+2',
-      'https://via.placeholder.com/400x300?text=Penthouse+Image+3'
+      'imagefile1/athena1.jpg',
+      'imagefile2/athena2.png',
+      'imagefile3/athena3.jpg'
     ],
-    location: 'Los Angeles, USA',
+    location: 'Athena Greek Restaurant',
     distance: '5 miles away',
     availableDate: 'Nov 15, 2024',
     cost: '$700 night',
@@ -133,11 +133,11 @@ const listingsData = [
   },
   {
     images: [
-      'https://via.placeholder.com/400x300?text=Castle+Image+1',
-      'https://via.placeholder.com/400x300?text=Castle+Image+2',
-      'https://via.placeholder.com/400x300?text=Castle+Image+3'
+      'imagefile1/field1.jpg',
+      'imagefile2/field2.jpg',
+      'imagefile3/field3.jpg'
     ],
-    location: 'Edinburgh, Scotland',
+    location: 'Field Museum',
     distance: '25 miles away',
     availableDate: 'Dec 5, 2024',
     cost: '$950 night',
