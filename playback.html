@@ -8,8 +8,26 @@
 </head>
 <body>
   <header>
-    <h1>Video Playback</h1>
-    <a href="index.html">Back to Home</a>
+    <div class="left-section">
+      <div class="menu-icon">☰</div>
+      <div class="logo">
+        <img src="youtube-logo.png" alt="YouTube" class="youtube-logo">
+      </div>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Search">
+          <button class="search-icon" onclick="searchVideos()">🔍</button>
+          <button class="voice-search" onclick="voiceSearch()">🎤</button>
+      </div>
+
+      <div class="right-section">
+        <button class="icon-button">➕</button>
+        <button class="icon-button">🔔</button>
+        <div class="account">
+          <div class="profile-icon">S</div>
+        </div>
+      </div>
   </header>
 
   <main class="playback-container">
