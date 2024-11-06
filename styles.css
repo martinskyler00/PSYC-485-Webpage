@@ -204,12 +204,85 @@ header {
   margin-top: 5px;
 }
 
+.location-container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
 /* Style for the star rating */
 .rating {
   font-size: 0.9rem;
   color: #000; /* Set color to black */
 }
 
+#location-name {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.location-info {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  font-size: 1.2rem;
+}
+
+/* Right: Details Container */
+.details-container {
+  width: 35%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.details-container h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+.details-container .host-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.details-container p {
+  font-size: 1rem;
+  color: #555;
+  margin: 8px 0;
+}
+
+.price-booking p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#reserve-btn {
+  padding: 10px 20px;
+  background-color: #FF5A5F;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#reserve-btn:hover {
+  background-color: #e04e55;
+}
 
 /* Responsive carousel container that adjusts to screen width */
 .carousel-container {

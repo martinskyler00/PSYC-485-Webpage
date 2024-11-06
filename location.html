@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location Details</title>
+  <link rel="stylesheet" href="location.css">
+</head>
+<body>
+  <header>
+    <a href="airbnb.html">Back to Listings</a>
+  </header>
+
+  <section class="location-container">
+    <!-- Image Gallery Section -->
+    <div id="image-gallery" class="image-gallery">
+      <!-- Images will be dynamically inserted here by location.js -->
+    </div>
+
+    <!-- Informational Section -->
+    <div class="details-section">
+      <h1 id="location-title">Loading...</h1>
+      <p id="location-type">Entire rental unit</p>
+      <div class="location-info">
+        <p><span id="location-guests"></span> guests • <span id="location-beds"></span> beds • <span id="location-baths"></span> baths</p>
+      </div>
+      <div class="rating-reviews">
+        <span id="location-rating"></span> stars • <span id="location-reviews"></span> reviews
+      </div>
+      <div class="amenities">
+        <p>Amenities: <span id="location-amenities">Pool, Fireplace, Fitness Center</span></p>
+      </div>
+
+      <!-- Booking Section -->
+      <div class="booking-section">
+        <div class="price-per-night">
+          <span id="location-cost"></span> per night
+        </div>
+        <div class="dates-section">
+          <label>Check-in:</label>
+          <input type="date" id="checkin-date">
+          <label>Check-out:</label>
+          <input type="date" id="checkout-date">
+        </div>
+        <button id="reserve-btn">Reserve</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="location.js"></script>
+</body>
+</html>

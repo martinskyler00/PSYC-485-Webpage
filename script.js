@@ -243,34 +243,38 @@ function displayListings(listings) {
       `<span class="dot ${i === 0 ? 'active' : ''}"></span>`
     ).join('');
 
+    // Add the anchor link around each listing card
     const listingCard = `
-      <div class="listing-card">
-        <div class="carousel-container">
-          <div class="carousel-images">
-            ${imagesHTML}
+      <a href="location.html?location=${encodeURIComponent(listing.location)}" class="listing-link">
+        <div class="listing-card">
+          <div class="carousel-container">
+            <div class="carousel-images">
+              ${imagesHTML}
+            </div>
+            <div class="carousel-nav">
+              <span class="prev-arrow">&#9664;</span> <!-- Left Arrow -->
+              <span class="next-arrow">&#9654;</span> <!-- Right Arrow -->
+            </div>
+            <div class="carousel-dots">
+              ${dotsHTML}
+            </div>
           </div>
-          <div class="carousel-nav">
-            <span class="prev-arrow">&#9664;</span> <!-- Left Arrow -->
-            <span class="next-arrow">&#9654;</span> <!-- Right Arrow -->
+          <div class="location-rating">
+            <h3>${listing.location}</h3>
+            <span class="rating">&#9733; ${listing.rating}</span>
           </div>
-          <div class="carousel-dots">
-            ${dotsHTML}
-          </div>
+          <p>${listing.distance}</p>
+          <p>${listing.availableDate}</p>
+          <p><strong>${listing.cost.split(' ')[0]}</strong> night</p>
         </div>
-        <div class="location-rating">
-          <h3>${listing.location}</h3>
-          <span class="rating">&#9733; ${listing.rating}</span> <!-- Black star icon with rating -->
-        </div>
-        <p>${listing.distance}</p>
-        <p>${listing.availableDate}</p>
-        <p><strong>${listing.cost.split(' ')[0]}</strong> night</p>
-      </div>
+      </a>
     `;
     listingsContainer.innerHTML += listingCard;
   });
 
   initializeCarousels();
 }
+
 
 function filterListings(category) {
   const filteredListings = listingsData.filter(listing => listing.category === category);
