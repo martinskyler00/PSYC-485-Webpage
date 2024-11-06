@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Playback</title>
+  <link rel="stylesheet" href="youtube.css">
+</head>
+<body>
+  <header>
+    <h1>Video Playback</h1>
+    <a href="index.html">Back to Home</a>
+  </header>
+
+  <main class="playback-container">
+    <div id="video-player"></div>
+  </main>
+
+  <script>
+    // Function to get video ID from URL parameters
+    function getVideoID() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('videoID');
+    }
+
+    // Embed the selected video with fullscreen capability
+    function loadVideo() {
+      const videoID = getVideoID();
+      if (videoID) {
+        const videoPlayer = document.getElementById('video-player');
+        videoPlayer.innerHTML = `
+          <iframe 
+            src="https://www.youtube.com/embed/${videoID}?autoplay=1" 
+            width="100%" height="500" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+        `;
+      } else {
+        document.getElementById('video-player').innerText = "No video selected";
+      }
+    }
+
+    window.onload = loadVideo;
+  </script>
+</body>
+</html>

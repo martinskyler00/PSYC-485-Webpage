@@ -15,9 +15,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #20232a;
+  background-color: #ffffff; /* Match with the body background */
   padding: 10px 20px;
-  color: #ffffff;
+  color: #000000; /* Adjust text color to black for visibility */
 }
 
 .left-section {
@@ -40,7 +40,7 @@ header {
   display: flex;
   align-items: center;
   width: 40%;
-  background-color: #121212;
+  background-color: #f1f1f1;
   border-radius: 25px;
   padding: 5px 10px;
 }
@@ -50,13 +50,15 @@ header {
   padding: 10px;
   background-color: transparent;
   border: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 1em;
   outline: none;
 }
 
 .search-icon,
-.voice-search {
+.voice-search,
+.icon-button,
+.profile-icon {
   background: none;
   border: none;
   color: #ffffff;
@@ -68,14 +70,6 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
-}
-
-.icon-button,
-.profile-icon {
-  background: none;
-  color: #ffffff;
-  font-size: 1.2em;
-  cursor: pointer;
 }
 
 .profile-icon {
@@ -98,14 +92,14 @@ header {
 /* Sidebar styling */
 .sidebar {
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   padding: 15px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .full-sidebar {
   width: 200px;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   padding: 15px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +109,7 @@ header {
   display: none;
   width: 80px;
   padding: 10px;
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -172,35 +166,47 @@ header {
   margin-bottom: 10px;
 }
 
+.video-thumbnail {
+  width: 100%;             /* Full width of the thumbnail container */
+  height: 205px;           /* Same height as iframe */
+  object-fit: cover;       /* Maintain aspect ratio, fill the container */
+  border-radius: 12px;     /* Rounded corners */
+}
+
+
+a {
+  text-decoration: none; /* Remove underline from all links */
+  color: inherit;        /* Inherit color from parent element */
+}
+
+.thumbnail a {
+  text-decoration: none; /* Ensure underline is removed specifically for thumbnails */
+}
+
 .thumbnails {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 videos per row for large screens */
+  grid-template-columns: repeat(6, 1fr); /* 6 videos per row for full screen */
   gap: 15px;
   row-gap: 30px;
 }
 
-.thumbnail iframe, .short iframe {
+.video-thumbnail, .thumbnail iframe {
   width: 100%;
-  height: 210px; /* Thinner height for a slimmer look */
-  border-radius: 12px; /* Rounded corners */
-  overflow: hidden;
-}
-
-.thumbnail {
-  width: 100%;
+  height: 205px;
+  object-fit: cover;
   border-radius: 12px;
-  overflow: hidden;
 }
 
 .thumbnail .title {
   font-size: 1em;
   font-weight: bold;
   color: #000000;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-top: 8px;
 }
 
+.thumbnail {
+  position: relative;
+}
 .thumbnail .description {
   font-size: 0.9em;
   color: #555555;
@@ -212,8 +218,21 @@ header {
 
 .shorts-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row for split screen */
   gap: 15px;
-  padding-bottom: 10px;
+}
+
+.short-thumbnail {
+  width: 100%;
+  height: 400px; /* Set height as per original short size */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.short iframe {
+  width: 100%;
+  height: 400px; /* Thinner height for a slimmer look */
+  border-radius: 12px; /* Rounded corners */
   overflow: hidden;
 }
 
@@ -230,13 +249,25 @@ header {
 }
 
 .short .title {
-  font-size: 0.9em;
+  font-size: 1em; /* Adjust font size as needed */
   font-weight: bold;
   color: #000000;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: left; /* Align text as per your preference */
+  margin-top: 10px; /* Adds some space between video and title */
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Ensure text wraps and doesn't overflow */
+}
+
+.playback-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+#video-player {
+  width: 80%;
+  max-width: 800px;
 }
 
 /* Responsive Design */
@@ -267,6 +298,18 @@ header {
 @media (max-width: 1500px) {
   .shorts-container {
     grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .shorts-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .shorts-container {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
   }
 }
 
