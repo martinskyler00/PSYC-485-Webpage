@@ -305,32 +305,43 @@ function initializeCarousels() {
     let currentIndex = 0;
     const totalImages = images.children.length;
 
-  function moveToImage(index) {
-    currentIndex = index;
-    const offset = -currentIndex * 100;
-    images.style.transform = `translateX(${offset}%)`;
-    updateDots();
-  }
+    function moveToImage(index) {
+      currentIndex = index;
+      const offset = -currentIndex * 100; // Shift container by 100% for each image
+      images.style.transform = `translateX(${offset}%)`; // Move to the image at the specified index
+      updateDots();
+    }
 
-  function updateDots() {
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  }
+    function updateDots() {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
 
-    card.querySelector('.prev-arrow').addEventListener('click', () => {
+    // Event listeners for arrow buttons
+    const prevArrow = card.querySelector('.prev-arrow');
+    const nextArrow = card.querySelector('.next-arrow');
+
+    prevArrow.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevents any link behavior
       moveToImage((currentIndex > 0) ? currentIndex - 1 : totalImages - 1);
     });
 
-    card.querySelector('.next-arrow').addEventListener('click', () => {
+    nextArrow.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevents any link behavior
       moveToImage((currentIndex < totalImages - 1) ? currentIndex + 1 : 0);
     });
 
     dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => moveToImage(i));
+      dot.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevents any link behavior
+        moveToImage(i);
+      });
     });
   });
 }
+
+
 
 window.onload = function() {
   displayListings(listingsData);

@@ -212,6 +212,18 @@ header {
   padding: 20px;
 }
 
+/* Removes underline from clickable links */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherits the color of the surrounding text */
+}
+
+/* Optional: Change color on hover for feedback */
+a:hover {
+  color: #FF5A5F; /* Airbnb's primary color */
+  text-decoration: none; /* Ensures underline stays removed on hover */
+}
+
 /* Style for the star rating */
 .rating {
   font-size: 0.9rem;
@@ -239,7 +251,6 @@ header {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 .details-container h1 {
   font-size: 1.8rem;
   margin-bottom: 10px;
@@ -439,8 +450,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.4); /* Translucent background */
   color: rgba(0, 0, 0, 0.6); /* Slightly dark arrow color */
@@ -455,26 +466,7 @@ footer {
   color: rgba(0, 0, 0, 0.8); /* Darker arrow color */
 }
 
-/* Custom arrows as two lines for left and right */
-.prev-arrow::before,
-.next-arrow::before {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor; /* Inherit color from the arrow */
-  transform: rotate(45deg);
-}
 
-.prev-arrow::after,
-.next-arrow::after {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  background-color: currentColor; /* Inherit color from the arrow */
-  transform: rotate(-45deg);
-}
 
 /* Adjust the arrow directions */
 .prev-arrow::before {

@@ -118,24 +118,29 @@
 
 <section id="listings" class="listings">
   <div class="listing-card">
-    <div class="carousel-container">
-      <div class="carousel-images">
-        <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Image 1">
-        <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Image 2">
-        <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Image 3">
+    <!-- Wrap the carousel-images div in an anchor link to make it clickable -->
+    <a href="location.html?location=Dollop%20Coffee%20Co" class="listing-link">
+      <div class="carousel-container">
+        <div class="carousel-images">
+          <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Image 1">
+          <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Image 2">
+          <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Image 3">
+        </div>
+        <div class="carousel-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
       </div>
-      <div class="carousel-nav">
-        <span class="prev-arrow">&#9664;</span> <!-- Left Arrow -->
-        <span class="next-arrow">&#9654;</span> <!-- Right Arrow -->
-      </div>
-      <div class="carousel-dots">
-        <span class="dot active"></span> <!-- Active dot -->
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
+    </a>
+
+    <!-- Place the navigation arrows outside the link to prevent navigation -->
+    <div class="carousel-nav">
+      <span class="prev-arrow">&#9664;</span> <!-- Left Arrow -->
+      <span class="next-arrow">&#9654;</span> <!-- Right Arrow -->
     </div>
-  </div>
 </section>
+
 
 <footer>
   <p>&copy; 2024 MySite. All Rights Reserved.</p>
