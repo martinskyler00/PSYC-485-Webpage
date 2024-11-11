@@ -1,28 +1,28 @@
 const recommendVideos = [
-    { title: "What are Input Controls?", description: "", videoID: "D-jl1E-_WBE", views: "views", timestamp: "27:15" },
-    { title: "What is Container in User Interface(UI) Design", description: "", videoID: "POtqGPrjdMI", views: "views", timestamp: "27:15" },
-    { title: "UI Design Essentials: Creating Buttons in Design Systems", description: "", videoID: "jts39CN4fLk", views: "views", timestamp: "14:48" },
-    { title: "UI and UX Design Course: Navigation", description: "", videoID: "-Iwf6tecoZ8", views: "views", timestamp: "00:07" },
-    { title: "Toggle or Checkbox? UI Design Tips 6", description: "", videoID: "ZpROQCLO56Q", views: "views", timestamp: "17:53" },
-    { title: "Material UI Tutorial #7 - Text Fields", description: "", videoID: "sTdt2cJS2dg", views: "views", timestamp: "14:35" },
-    { title: "UI Elements/Components | Types and Importance of UI Elements", description: "", videoID: "roF6ocfArK0", views: "views", timestamp: "8:20" },
-    { title: "Create a DROPDOWN MENU in Figma (Tutorial)", description: "", videoID: "uI3k9Ol-Mp4", views: "views", timestamp: "5:40" },
-    { title: "Create Interactive Radio Buttons in Figma-2 Methods (Free Project Files Included)", description: "", videoID: "mWIJghK6YiM", views: "views", timestamp: "12:05" },
-    { title: "Daily UI - Day 056 - Breadcrumbs", description: "", videoID: "1zSKJgzd5fw", views: "views", timestamp: "15:45" },
-    { title: "Slider UI Animation Tutorial - Adding Motion to your Designs", description: "", videoID: "PECpQBSnEIQ", views: "views", timestamp: "9:50" },
-    { title: "How to use icons in UI design", description: "", videoID: "L9keN02a_qw", views: "views", timestamp: "20:00" },
+    { title: "What are Input Controls? User Interface(UI) Design Elements.", description: "Club UX", videoID: "D-jl1E-_WBE", views: "1.8K views" },
+    { title: "What is Container in User Interface(UI) Design", description: "Club UX", videoID: "POtqGPrjdMI", views: "1.5K views" },
+    { title: "UI Design Essentials: Creating Buttons in Design Systems", description: "DesignCode", videoID: "jts39CN4fLk", views: "8.5K views" },
+    { title: "UI and UX Design Course: Navigation", description: "Kerev Design", videoID: "-Iwf6tecoZ8", views: " 3.5K views" },
+    { title: "Toggle or Checkbox? UI Design Tips 6", description: "Malewicz", videoID: "ZpROQCLO56Q", views: "8.5K views" },
+    { title: "Material UI Tutorial #7 - Text Fields", description: "Net Ninja", videoID: "sTdt2cJS2dg", views: "113K views" },
+    { title: "UI Elements/Components | Types and Importance of UI Elements", description: "uxable - learning ux together", videoID: "roF6ocfArK0", views: "12K views"},
+    { title: "Create a DROPDOWN MENU in Figma (Tutorial)", description: "Mavi Design", videoID: "uI3k9Ol-Mp4", views: "579K views" },
+    { title: "Create Interactive Radio Buttons in Figma-2 Methods (Free Project Files Included)", description: "UxDan", videoID: "mWIJghK6YiM", views: "2.1K views" },
+    { title: "Daily UI - Day 056 - Breadcrumbs", description: "Caler Edwards", videoID: "1zSKJgzd5fw", views: " 6.5K views" },
+    { title: "Slider UI Animation Tutorial - Adding Motion to your Designs", description: "Caler Edwards", videoID: "PECpQBSnEIQ", views: "18K views" },
+    { title: "How to use icons in UI design", description: "Nick Babich", videoID: "L9keN02a_qw", views: "1.2K views" },
 ];
 
 const shortVideos = [
-  { title: "What do UX Designers actually do? Ft. Microsoft UX Designer", description: "", videoID: "2Q9pFMwi3cs", views: "views", timestamp: "27:15" },
-  { title: "The Future of UI/UX Design", description: "", videoID: "SRWLLJ6h5l4", views: "views", timestamp: "27:15" },
-  { title: "App UI Design with Adobe XD", description: "", videoID: "mZvB7ksm9PI", views: "views", timestamp: "14:48" },
-  { title: "What is UI and UX Design?", description: "", videoID: "rKqwGUMGbq8", views: "views", timestamp: "00:07" },
-  { title: "The Difference between UI and UX Design", description: "", videoID: "Ar_rFTRO8P4", views: "views", timestamp: "17:53" },
-  { title: "Unveiling UI/UX Designers' Psychology Hacks!", description: "", videoID: "7-CEqe3IZmo", views: "views", timestamp: "14:35" },
-  { title: "Color Psychology Hacks for Stunning UI/UX Design", description: "", videoID: "LvVyNzLTlZU", views: "views", timestamp: "8:20" },
-  { title: "How Does Psychology In UI/UX Affect User Behavior?|Intellipaat", description: "", videoID: "elje7bnAL-s", views: "views", timestamp: "5:40" },
-  { title: "7 Psychology Rules in UX Design and Product Design", description: "", videoID: "2voBm_EWldw", views: "views", timestamp: "12:05" },
+  { title: "What do UX Designers actually do? Ft. Microsoft UX Designer", description: "", videoID: "2Q9pFMwi3cs", views: "views"},
+  { title: "The Future of UI/UX Design", description: "", videoID: "SRWLLJ6h5l4", views: "views"},
+  { title: "App UI Design with Adobe XD", description: "", videoID: "mZvB7ksm9PI", views: "views" },
+  { title: "What is UI and UX Design?", description: "", videoID: "rKqwGUMGbq8", views: "views" },
+  { title: "The Difference between UI and UX Design", description: "", videoID: "Ar_rFTRO8P4", views: "views" },
+  { title: "Unveiling UI/UX Designers' Psychology Hacks!", description: "", videoID: "7-CEqe3IZmo", views: "views" },
+  { title: "Color Psychology Hacks for Stunning UI/UX Design", description: "", videoID: "LvVyNzLTlZU", views: "views" },
+  { title: "How Does Psychology In UI/UX Affect User Behavior?|Intellipaat", description: "", videoID: "elje7bnAL-s", views: "views"},
+  { title: "7 Psychology Rules in UX Design and Product Design", description: "", videoID: "2voBm_EWldw", views: "views" },
 ];
 
 
@@ -45,6 +45,8 @@ function displayThumbnails() {
           <img src="https://img.youtube.com/vi/${video.videoID}/0.jpg" alt="${video.title}" class="video-thumbnail" />
           <div class="info">
             <div class="title">${video.title}</div>
+            <div class="description">${video.description}</div>
+            <div class="extra-info"><span class="views">${video.views}</span></div>
           </div>
         </a>
       `;
@@ -66,6 +68,8 @@ function displayThumbnails() {
           <img src="https://img.youtube.com/vi/${video.videoID}/0.jpg" alt="${video.title}" class="video-thumbnail" />
           <div class="info">
             <div class="title">${video.title}</div>
+            <div class="description">${video.description}</div>
+            <div class="extra-info"><span class="views">${video.views}</span></div>
           </div>
         </a>
       `;
@@ -80,6 +84,8 @@ function displayThumbnails() {
           <img src="https://img.youtube.com/vi/${video.videoID}/0.jpg" alt="${video.title}" class="video-thumbnail" />
           <div class="info">
             <div class="title">${video.title}</div>
+            <div class="description">${video.description}</div>
+            <div class="extra-info"><span class="views">${video.views}</span></div>
           </div>
         </a>
       `;
@@ -124,6 +130,9 @@ function displayShorts() {
     shortElement.innerHTML = `
       <a href="playback.html?videoID=${video.videoID}">
         <img src="https://img.youtube.com/vi/${video.videoID}/0.jpg" alt="${video.title}" class="short-thumbnail" />
+        <div class="title">${video.title}</div>
+        <div class="description">${video.description}</div>
+        <div class="extra-info"><span class="views">${video.views}</span></div>
       </a>
     `;
 

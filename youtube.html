@@ -11,15 +11,18 @@
     <div class="left-section">
       <div class="menu-icon">☰</div>
       <div class="logo">
-        <img src="youtube-logo.png" alt="YouTube" class="youtube-logo">
+        <img src="" alt="YouTube" class="youtube-logo">
       </div>
       </div>
 
-      <div class="search-bar">
-        <input type="text" id="search" placeholder="Search">
-          <button class="search-icon" onclick="searchVideos()">🔍</button>
-          <button class="voice-search" onclick="voiceSearch()">🎤</button>
-      </div>
+      <div class="search-bar-container">
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search">
+            <button class="search-icon" onclick="searchVideos()">🔍</button>
+        </div>
+        <!-- Voice Search Button placed outside the search bar -->
+        <button class="voice-search" onclick="voiceSearch()">🎤</button>
+    </div>
 
       <div class="right-section">
         <button class="icon-button">➕</button>
