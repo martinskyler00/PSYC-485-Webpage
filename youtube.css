@@ -307,7 +307,7 @@ a {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1000px) and (max-width: 768px) {
   .thumbnails {
     grid-template-columns: repeat(2, 1fr);
   }
