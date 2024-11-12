@@ -11,7 +11,7 @@ const listingsData = [
         ],
         location: 'Dollop Coffee Co.',
         type: '1210 S Indiana Ave',
-        guests: 8,
+        guests: 6,
         beds: 3,
         baths: 2,
         amenities: 'Pool, Fireplace, Fitness Center',
@@ -255,7 +255,6 @@ const listingsData = [
 ];
 
 
-// Retrieve location parameter from URL
 const urlParams = new URLSearchParams(window.location.search);
 const locationName = urlParams.get('location');
 
@@ -263,6 +262,7 @@ const locationName = urlParams.get('location');
 const locationTitle = document.getElementById('location-title');
 const imageGallery = document.getElementById('image-gallery');
 const detailsSection = document.querySelector('.details-section');
+const googleReviewsLink = document.getElementById('google-reviews-link');
 
 // Find the listing based on location name
 const listing = listingsData.find(item => item.location === locationName);
@@ -287,9 +287,15 @@ if (listing) {
     document.getElementById('location-reviews').innerText = `${listing.reviews} reviews`;
     document.getElementById('location-amenities').innerText = listing.amenities;
     document.getElementById('location-cost').innerText = listing.cost;
+
+    // Set the Google reviews link
+    if (listing.googleReviewLink) {
+        googleReviewsLink.href = listing.googleReviewLink;
+    }
 } else {
     locationTitle.innerText = 'Location not found';
 }
+
 
 // JavaScript in location.html
 function getQueryParams() {
@@ -312,4 +318,3 @@ function getQueryParams() {
   
   // Initialize on page load
   window.onload = setReserveButton;
-  

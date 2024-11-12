@@ -277,7 +277,7 @@ function displayListings(listings) {
           </div>
           <p>${listing.distance}</p>
           <p>${listing.availableDate}</p>
-          <p><strong>${listing.cost.split(' ')[0]}</strong> night</p>
+          <p><strong>${listing.cost.split(' ')[0]}</strong> person</p>
         </div>
       </a>
     `;
