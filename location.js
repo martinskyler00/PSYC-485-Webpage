@@ -10,16 +10,16 @@ const listingsData = [
             'imagefile5/dollop6.jpg'
         ],
         location: 'Dollop Coffee Co.',
-        type: 'Entire rental unit',
+        type: '1210 S Indiana Ave',
         guests: 8,
         beds: 3,
         baths: 2,
         amenities: 'Pool, Fireplace, Fitness Center',
         distance: '5 miles away',
         availableDate: 'Oct 25, 2024',
-        cost: '$120',
-        rating: '4.5',
-        reviews: 28,
+        cost: '$10-$20 person',
+        rating: '3.5',
+        reviews: 136,
         category: 'coffee'
     },
     {
@@ -31,16 +31,15 @@ const listingsData = [
             'imagefile5/intelligentsia6.jpg'
         ],
         location: 'Intelligentsia',
-        type: 'Entire rental unit',
+        type: '3123 N Broadway',
         guests: 6,
         beds: 2,
         baths: 1,
         amenities: 'WiFi, Coffee Machine, Heating',
-        distance: '15 miles away',
         availableDate: 'Nov 1, 2024',
-        cost: '$200',
-        rating: '4.7',
-        reviews: 45,
+        cost: '$1-$10 person',
+        rating: '4.4',
+        reviews: 853,
         category: 'coffee'
     },
     {
@@ -291,3 +290,26 @@ if (listing) {
 } else {
     locationTitle.innerText = 'Location not found';
 }
+
+// JavaScript in location.html
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      location: params.get('location'),
+      webpage: params.get('webpage')
+    };
+  }
+  
+  function setReserveButton() {
+    const { webpage } = getQueryParams();
+    const reserveButton = document.getElementById('reserve-btn');
+  
+    // Set the Reserve button link to the webpage
+    if (webpage) {
+        reserveButton.onclick = () => window.open(webpage, '_blank');
+      }
+    }
+  
+  // Initialize on page load
+  window.onload = setReserveButton;
+  

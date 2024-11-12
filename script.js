@@ -6,10 +6,11 @@ const listingsData = [
       'imagefile3/dollop3.jpg'
     ],
     location: 'Dollop Coffee Co.',
-    distance: '5 miles away',
-    availableDate: 'Oct 25, 2024',
-    cost: '$120 night',
-    rating: '4.5',
+    distance: '1210 S Indiana Ave',
+    availableDate: '7 AM - 2 PM',
+    cost: '$10-$20 person',
+    rating: '3.5',
+    webpage: 'https://www.dollopcoffee.com/',
     category: 'coffee'
   },
   {
@@ -19,10 +20,11 @@ const listingsData = [
       'imagefile3/intelligentsia3.jpg'
     ],
     location: 'Intelligentsia',
-    distance: '15 miles away',
-    availableDate: 'Nov 1, 2024',
-    cost: '$200 night',
-    rating: '4.7',
+    distance: '3123 N Broadway',
+    availableDate: '7 AM - 7 PM',
+    cost: '$1-$10 person',
+    rating: '4.4',
+    webpage: 'https://www.intelligentsia.com/pages/broadway-coffeebar',
     category: 'coffee'
   },
   {
@@ -32,10 +34,11 @@ const listingsData = [
       'imagefile3/peets3.jpg'
     ],
     location: 'Peets Coffee',
-    distance: '3 miles away',
-    availableDate: 'Oct 20, 2024',
-    cost: '$450 night',
-    rating: '4.8',
+    distance: '1000 W North Ave',
+    availableDate: '6 AM - 5 PM',
+    cost: '$1-$10 person',
+    rating: '4.4',
+    webpage: 'https://www.peets.com/pages/store-locator?stockist-query=Chicago,%20IL,%20USA&selected=Sheffield',
     category: 'coffee'
   },
   {
@@ -45,10 +48,11 @@ const listingsData = [
       'imagefile3/Christkindl3.jpg'
     ],
     location: 'Christkindl Market Chicago',
-    distance: '10 miles away',
-    availableDate: 'Nov 5, 2024',
-    cost: '$300 night',
-    rating: '4.6',
+    distance: '50 W Washington St',
+    availableDate: 'Temporarily Closed',
+    cost: '$20 person',
+    rating: '4.3',
+    webpage: 'https://www.christkindlmarket.com/daleyplaza/',
     category: 'seasonal'
   },
   {
@@ -58,10 +62,11 @@ const listingsData = [
       'imagefile3/jacks3.webp'
     ],
     location: 'Jacks Pumpkin Pop Up',
-    distance: '20 miles away',
-    availableDate: 'Oct 30, 2024',
-    cost: '$40 night',
-    rating: '4.2',
+    distance: '1265 W Le Moyne St',
+    availableDate: 'Temporarily Closed',
+    cost: '$40 person',
+    rating: '3.9',
+    webpage: 'https://www.jackspumpkinpopup.com/',
     category: 'seasonal'
   },
   {
@@ -71,10 +76,11 @@ const listingsData = [
       'imagefile3/offshore3.jpg'
     ],
     location: 'Offshore Rooftop',
-    distance: '7 miles away',
-    availableDate: 'Dec 1, 2024',
-    cost: '$600 night',
-    rating: '4.9',
+    distance: '1000 E Grand Ave',
+    availableDate: '12 PM - 8 PM',
+    cost: '$35-$50 person',
+    rating: '3.8',
+    webpage: 'https://www.offshorerooftop.com/',
     category: 'restaurant'
   },
   {
@@ -84,10 +90,11 @@ const listingsData = [
       'imagefile3/soldier3.webp'
     ],
     location: 'Soldier Field',
-    distance: '12 miles away',
-    availableDate: 'Oct 28, 2024',
-    cost: '$250 night',
-    rating: '4.7',
+    distance: '1410 Special Olympics Dr',
+    availableDate: 'Open',
+    cost: '$250 person',
+    rating: '4.5',
+    webpage: 'https://www.soldierfield.com/',
     category: 'attraction'
   },
   {
@@ -97,10 +104,11 @@ const listingsData = [
       'imagefile3/marias3.jpg'
     ],
     location: 'Marias Packaged Goods and Community Bar',
-    distance: '30 miles away',
-    availableDate: 'Nov 10, 2024',
-    cost: '$180 night',
-    rating: '4.5',
+    distance: '960 W 31st St',
+    availableDate: '3 PM - 12 AM',
+    cost: '$10-$20 person',
+    rating: '4.6',
+    webpage: 'https://www.community-bar.com/',
     category: 'bars'
   },
   {
@@ -110,10 +118,11 @@ const listingsData = [
       'imagefile3/artinstitute3.webp'
     ],
     location: 'The Art Institute of Chicago',
-    distance: '2 miles away',
-    availableDate: 'Oct 22, 2024',
-    cost: '$90 night',
-    rating: '4.3',
+    distance: '111 S Michigan Ave',
+    availableDate: '11 AM - 5 PM',
+    cost: '$32 person',
+    rating: '4.8',
+    webpage: 'https://www.artic.edu/',
     category: 'museum'
   },
   {
@@ -123,10 +132,11 @@ const listingsData = [
       'imagefile3/pier3.jpg'
     ],
     location: 'Navy Pier',
-    distance: '8 miles away',
-    availableDate: 'Nov 2, 2024',
-    cost: '$320 night',
+    distance: '600 E Grand Ave',
+    availableDate: '11 AM - 9 PM',
+    cost: 'Free',
     rating: '4.6',
+    webpage: 'https://navypier.org/',
     category: 'attractions'
   },
   {
@@ -136,10 +146,11 @@ const listingsData = [
       'imagefile3/athena3.jpg'
     ],
     location: 'Athena Greek Restaurant',
-    distance: '5 miles away',
-    availableDate: 'Nov 15, 2024',
-    cost: '$700 night',
-    rating: '4.8',
+    distance: '212 S Halsted St',
+    availableDate: '11 AM - 9 PM',
+    cost: '$25-$50 person',
+    rating: '4.4',
+    webpage: 'https://www.athenachicago.com/',
     category: 'restaurant'
   },
   {
@@ -149,10 +160,11 @@ const listingsData = [
       'imagefile3/field3.jpg'
     ],
     location: 'Field Museum',
-    distance: '25 miles away',
-    availableDate: 'Dec 5, 2024',
-    cost: '$950 night',
-    rating: '5.0',
+    distance: '1400 S Lake Shore Dr',
+    availableDate: '9 AM - 5 PM',
+    cost: '$30 person',
+    rating: '4.7',
+    webpage: 'https://www.fieldmuseum.org/?gad_source=1&gclid=Cj0KCQiAlsy5BhDeARIsABRc6ZuCWlAdAZmXpuSfrKo5l69QvOf7K7hi8yYS_PzE7KTnai_wYqbG7zMaAkZmEALw_wcB',
     category: 'museum'
   },
   {
@@ -243,9 +255,9 @@ function displayListings(listings) {
       `<span class="dot ${i === 0 ? 'active' : ''}"></span>`
     ).join('');
 
-    // Add the anchor link around each listing card
+    // Pass the `webpage` URL as a query parameter
     const listingCard = `
-      <a href="location.html?location=${encodeURIComponent(listing.location)}" class="listing-link">
+      <a href="location.html?location=${encodeURIComponent(listing.location)}&webpage=${encodeURIComponent(listing.webpage)}" class="listing-link">
         <div class="listing-card">
           <div class="carousel-container">
             <div class="carousel-images">
@@ -274,6 +286,7 @@ function displayListings(listings) {
 
   initializeCarousels();
 }
+
 
 
 function filterListings(category) {

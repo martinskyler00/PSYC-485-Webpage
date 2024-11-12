@@ -179,6 +179,8 @@ header {
   margin: 5px 0;
   white-space: nowrap; /* Prevents line wrap */
   width: 100%; /* Ensures text takes the full width of the card */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .listing-card p {
@@ -202,6 +204,13 @@ header {
   justify-content: space-between;
   align-items: center;
   margin-top: 5px;
+}
+
+.location-text {
+  max-width: 80%; /* Adjust this percentage to leave space for the rating */
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  overflow: hidden; /* Hides any overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if text is too long */
 }
 
 .location-container {
