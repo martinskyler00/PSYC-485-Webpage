@@ -301,22 +301,39 @@ a {
 }
 
 /* Responsive Design */
-@media (max-width: 1278px) {
-  .thumbnails {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* Extra Large Screens (desktops/monitors) */
+@media (min-width: 1200px) and (max-width: 1278px){
+    .thumbnails {
+        grid-template-columns: repeat(3, 1fr); /* 6 videos per row */
+    }
 }
 
+/* Large Screens (laptops/desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .thumbnails {
+        grid-template-columns: repeat(4, 1fr); /* 4 videos per row */
+    }
+}
+
+/* Medium Screens (tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .thumbnails {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .thumbnails {
+        grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+    }
 }
 
+/* Small Screens (phones) */
+@media (max-width: 767px) {
+    .thumbnails {
+        grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
+    }
+}
+
+/* Extra Small Screens (smaller phones) */
 @media (max-width: 480px) {
-  .thumbnails {
-    grid-template-columns: 1fr;
-  }
+    .thumbnails {
+        grid-template-columns: 1fr; /* 1 video per row */
+    }
 }
 
 @media (min-width: 1501px) {
