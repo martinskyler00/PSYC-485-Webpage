@@ -323,7 +323,7 @@ a {
   }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 1600px) {
   .shorts-container {
     grid-template-columns: repeat(5, 1fr);
   }
