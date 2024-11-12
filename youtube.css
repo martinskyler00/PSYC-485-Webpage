@@ -301,39 +301,25 @@ a {
 }
 
 /* Responsive Design */
-/* Extra Large Screens (desktops/monitors) */
-@media (min-width: 1200px) and (max-width: 1278px){
-    .thumbnails {
-        grid-template-columns: repeat(3, 1fr); /* 6 videos per row */
-    }
+/* Medium Screens: 3 videos per row */
+@media (max-width: 1300px) {
+  .thumbnails {
+      grid-template-columns: repeat(3, 1fr); /* 3 videos per row for medium screens */
+  }
 }
 
-/* Large Screens (laptops/desktops) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    .thumbnails {
-        grid-template-columns: repeat(4, 1fr); /* 4 videos per row */
-    }
+/* Tablet Screens: 2 videos per row */
+@media (max-width: 768px) {
+  .thumbnails {
+      grid-template-columns: repeat(2, 1fr); /* 2 videos per row for tablets */
+  }
 }
 
-/* Medium Screens (tablets) */
-@media (min-width: 768px) and (max-width: 991px) {
-    .thumbnails {
-        grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
-    }
-}
-
-/* Small Screens (phones) */
-@media (max-width: 767px) {
-    .thumbnails {
-        grid-template-columns: repeat(2, 1fr); /* 2 videos per row */
-    }
-}
-
-/* Extra Small Screens (smaller phones) */
+/* Mobile Screens: 1 video per row */
 @media (max-width: 480px) {
-    .thumbnails {
-        grid-template-columns: 1fr; /* 1 video per row */
-    }
+  .thumbnails {
+      grid-template-columns: 1fr; /* 1 video per row for mobile */
+  }
 }
 
 @media (min-width: 1501px) {
