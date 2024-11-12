@@ -248,8 +248,9 @@ a {
 
 .shorts-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 per row for split screen */
+  grid-template-columns: repeat(9, 1fr); /* 3 per row for split screen */
   gap: 15px;
+  overflow: hidden;
 }
 
 .short-thumbnail {
@@ -302,7 +303,7 @@ a {
 
 /* Responsive Design */
 /* Medium Screens: 3 videos per row */
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
   .thumbnails {
       grid-template-columns: repeat(3, 1fr); /* 3 videos per row for medium screens */
   }
@@ -322,27 +323,30 @@ a {
   }
 }
 
-@media (min-width: 1501px) {
-  .shorts-container {
-    grid-template-columns: repeat(9, 1fr);
-  }
-}
-
-@media (max-width: 1500px) {
+@media (min-width: 1200px) {
   .shorts-container {
     grid-template-columns: repeat(5, 1fr);
+  }
+  .short:nth-child(n+6) {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .shorts-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .short:nth-child(n+4) {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .shorts-container {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+  }
+  .short:nth-child(n+3) {
+    display: none;
   }
 }
 
