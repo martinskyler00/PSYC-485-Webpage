@@ -237,7 +237,8 @@ a {
   position: relative;
 }
 
-.thumbnail .description {
+.thumbnail .description,
+.thumbnail .views {
   font-size: 0.9em;
   color: #555555;
   overflow: hidden;
@@ -287,6 +288,15 @@ a {
   margin-top: 10px; /* Adds some space between video and title */
   white-space: normal; /* Allow text to wrap */
   overflow: visible; /* Ensure text wraps and doesn't overflow */
+}
+
+.short .views {
+  font-size: 0.9em;
+  color: #555555;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .playback-container {
