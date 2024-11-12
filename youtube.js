@@ -14,15 +14,15 @@ const recommendVideos = [
 ];
 
 const shortVideos = [
-  { title: "What do UX Designers actually do? Ft. Microsoft UX Designer", description: "", videoID: "2Q9pFMwi3cs", views: "views"},
-  { title: "The Future of UI/UX Design", description: "", videoID: "SRWLLJ6h5l4", views: "views"},
-  { title: "App UI Design with Adobe XD", description: "", videoID: "mZvB7ksm9PI", views: "views" },
-  { title: "What is UI and UX Design?", description: "", videoID: "rKqwGUMGbq8", views: "views" },
-  { title: "The Difference between UI and UX Design", description: "", videoID: "Ar_rFTRO8P4", views: "views" },
-  { title: "Unveiling UI/UX Designers' Psychology Hacks!", description: "", videoID: "7-CEqe3IZmo", views: "views" },
-  { title: "Color Psychology Hacks for Stunning UI/UX Design", description: "", videoID: "LvVyNzLTlZU", views: "views" },
-  { title: "How Does Psychology In UI/UX Affect User Behavior?|Intellipaat", description: "", videoID: "elje7bnAL-s", views: "views"},
-  { title: "7 Psychology Rules in UX Design and Product Design", description: "", videoID: "2voBm_EWldw", views: "views" },
+  { title: "What do UX Designers actually do? Ft. Microsoft UX Designer", videoID: "2Q9pFMwi3cs", views: " 553K views"},
+  { title: "The Future of UI/UX Design", videoID: "SRWLLJ6h5l4", views: "153K views"},
+  { title: "App UI Design with Adobe XD", videoID: "mZvB7ksm9PI", views: "350K views" },
+  { title: "What is UI and UX Design?", videoID: "rKqwGUMGbq8", views: "24K views" },
+  { title: "The Difference between UI and UX Design", videoID: "Ar_rFTRO8P4", views: "40K views" },
+  { title: "Unveiling UI/UX Designers' Psychology Hacks!", videoID: "7-CEqe3IZmo", views: "29 views" },
+  { title: "Color Psychology Hacks for Stunning UI/UX Design", videoID: "LvVyNzLTlZU", views: "54 views" },
+  { title: "How Does Psychology In UI/UX Affect User Behavior?|Intellipaat", videoID: "elje7bnAL-s", views: "11K views"},
+  { title: "7 Psychology Rules in UX Design and Product Design", videoID: "2voBm_EWldw", views: "2.3K views" },
 ];
 
 
@@ -131,7 +131,6 @@ function displayShorts() {
       <a href="playback.html?videoID=${video.videoID}">
         <img src="https://img.youtube.com/vi/${video.videoID}/0.jpg" alt="${video.title}" class="short-thumbnail" />
         <div class="title">${video.title}</div>
-        <div class="description">${video.description}</div>
         <div class="extra-info"><span class="views">${video.views}</span></div>
       </a>
     `;
