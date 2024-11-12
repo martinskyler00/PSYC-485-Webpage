@@ -236,6 +236,7 @@ a {
 .thumbnail {
   position: relative;
 }
+
 .thumbnail .description {
   font-size: 0.9em;
   color: #555555;
@@ -243,6 +244,14 @@ a {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+
+.thumbnail img,
+.short img {
+  aspect-ratio: 16 / 9; /* Keeps a 16:9 aspect ratio */
+  width: 100%;
+  object-fit: cover; /* Ensures the image fills the container */
+  border-radius: 12px; /* Keep rounded corners */
 }
 
 .shorts-container {
