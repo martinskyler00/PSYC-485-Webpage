@@ -513,14 +513,14 @@ footer {
 }
 
 /* Small screens: 2 items per row */
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .listings {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Medium screens: 4 items per row */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .listings {
     grid-template-columns: repeat(4, 1fr);
   }
