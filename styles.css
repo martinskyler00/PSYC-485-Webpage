@@ -160,7 +160,7 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Default to 2 items per row on smaller screens */
   gap: 10px; /* Smaller gap between listing cards */
-  padding: 100px; /* Reduced padding around the listings container */
+  padding: 30px; /* Reduced padding around the listings container */
 }
 
 .listing-card {
@@ -510,6 +510,13 @@ footer {
 
 .carousel-nav .next-arrow {
   right: 10px;
+}
+
+/* Small screens: 2 items per row */
+@media (min-width: 480px) {
+  .listings {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Medium screens: 4 items per row */
