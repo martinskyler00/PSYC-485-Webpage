@@ -46,22 +46,24 @@ header {
 }
 
 .search-container {
+  display: flex;
+  flex-direction: column; /* Stack minimized-search above search-bar */
+  align-items: center;
   position: absolute;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 60%;
-  transition: all 0.3s ease-in-out; /* Smooth transition for resizing */
 }
 
 .search-bar {
+  margin-top: 10px; /* Space between the minimized-search and search bar */
   display: flex;
   gap: 10px;
   background-color: white;
   padding: 10px;
   border-radius: 25px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
 }
 
 .search-bar input {
@@ -85,14 +87,13 @@ header {
 }
 
 .minimized-search {
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-weight: bold;
+  padding: 5px 0; /* Add spacing above the search bar */
   background-color: white;
   border-radius: 25px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  gap: 20px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -109,9 +110,8 @@ header {
 }
 
 .minimized-search span {
-  font-weight: bold;
-  cursor: pointer;
   color: #333;
+  cursor: pointer;
   transition: color 0.2s ease;
 }
 
@@ -150,10 +150,7 @@ header {
 }
 
 .header-minimized .minimized-search {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  font-weight: bold;
+  display: none; /* Hide minimized search in minimized header */
 }
 
 .listings {

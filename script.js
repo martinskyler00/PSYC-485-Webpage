@@ -169,51 +169,56 @@ const listingsData = [
   },
   {
     images: [
-      'imagefile1/dollop4.webp',
-      'imagefile2/dollop2.jpg',
-      'imagefile3/dollop3.jpg'
+      'imagefile4/green4.jpg',
+      'imagefile2/green2.jpg',
+      'imagefile5/green5.jpg'
     ],
-    location: 'Sample',
-    distance: '5 miles away',
-    availableDate: 'Oct 25, 2024',
-    cost: '$120 night',
-    rating: '4.5'
+    location: 'Green Street Smoked Meats',
+    distance: '112 N Green St',
+    availableDate: '11 AM - 10:30 PM',
+    cost: '$20-$30 person',
+    rating: '4.7',
+    webpage: 'https://www.greenstreetmeats.com/',
+    category: 'restaurant'
   },
   {
     images: [
-      'imagefile1/intelligentsia4.jpg',
-      'imagefile2/intelligentsia2.jpg',
-      'imagefile3/intelligentsia3.jpg'
+      'imagefile4/dots4.webp',
+      'imagefile2/dots2.avif',
+      'imagefile3/dots3.png'
     ],
-    location: 'Sample',
-    distance: '15 miles away',
-    availableDate: 'Nov 1, 2024',
-    cost: '$200 night',
-    rating: '4.7'
+    location: 'Three Dots and a Dash',
+    distance: '435 N Clark St',
+    availableDate: '4 PM - 12 AM',
+    cost: '$30-$40 person',
+    webpage: 'https://www.threedotschicago.com/',
+    rating: '4.5',
+    category: 'bar'
   },
   {
     images: [
-      'imagefile1/peets4.jpg',
-      'imagefile2/peets2.jpg',
-      'imagefile3/peets3.jpg'
+      'imagefile1/maggie1.jpg',
+      'imagefile2/maggie2.webp',
+      'imagefile3/maggie3.webp'
     ],
-    location: 'Sample',
-    distance: '3 miles away',
-    availableDate: 'Oct 20, 2024',
-    cost: '$450 night',
-    rating: '4.8'
+    location: 'Maggie Daley Park',
+    distance: '337 E Randolph St',
+    availableDate: '6 AM - 9 PM',
+    cost: 'Free',
+    rating: '4.7',
+    category: 'park'
   },
   {
     images: [
-      'imagefile1/Christkindl1.jpg',
-      'imagefile2/Christkindl2.jpg',
-      'imagefile3/Christkindl3.jpg'
+      'imagefile1/beach1.jpg',
+      'imagefile4/beach4.jpeg',
+      'imagefile3/beach3.jpg'
     ],
-    location: 'Sample',
-    distance: '10 miles away',
-    availableDate: 'Nov 5, 2024',
-    cost: '$300 night',
-    rating: '4.6'
+    location: 'North Avenue Beach',
+    distance: '1600 N Jean-Baptiste Point Du Sable Lake Shore Dr',
+    availableDate: '11 AM - 7 PM',
+    cost: 'Free',
+    rating: '4.0'
   },
   {
     images: [
@@ -358,16 +363,6 @@ function initializeCarousels() {
 
 window.onload = function() {
   displayListings(listingsData);
-};
-
-window.onscroll = function() {
-  const header = document.querySelector('header');
-
-  if (window.scrollY > 150) {
-    header.classList.add('header-minimized'); // Fix the header and minimize it
-  } else {
-    header.classList.remove('header-minimized'); // Restore full header
-  }
 };
 
 document.querySelector('.left-arrow').addEventListener('click', () => {

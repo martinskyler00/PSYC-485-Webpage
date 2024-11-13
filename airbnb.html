@@ -13,12 +13,7 @@
       <img src="https://via.placeholder.com/40" alt="Account" />
     </div>    
     <div class="search-container">
-      <div class="search-bar" id="search-bar">
-        <input type="text" id="location" placeholder="Where are you going?" />
-        <input type="date" id="checkin-date" />
-        <input type="date" id="checkout-date" />
-        <button id="search-btn">Search</button>
-      </div>
+      <!-- Move minimized-search above search-bar -->
       <div class="minimized-search" id="minimized-search">
         <span>Anywhere</span>
         <span>|</span>
@@ -26,8 +21,15 @@
         <span>|</span>
         <span>Add Guests</span>
       </div>
+      <div class="search-bar" id="search-bar">
+        <input type="text" id="location" placeholder="Where are you going?" />
+        <input type="date" id="checkin-date" />
+        <input type="date" id="checkout-date" />
+        <button id="search-btn">Search</button>
+      </div>
     </div>
   </header>
+  
 
   <section class="place-options-container">
     <span class="arrow left-arrow">&#9664;</span> <!-- Left Arrow -->
@@ -60,9 +62,9 @@
       <img src="icons/museum.png" alt="Museum">
       <p>Museums</p>
     </div>
-    <div class="option">
-      <img src="https://via.placeholder.com/50" alt="Bungalow">
-      <p>Bungalow</p>
+    <div class="option" data-category="park">
+      <img src="icons/museum.png" alt="Park">
+      <p>Parks</p>
     </div>
     <div class="option">
       <img src="https://via.placeholder.com/50" alt="Boat">
