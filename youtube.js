@@ -25,6 +25,89 @@ const shortVideos = [
   { title: "7 Psychology Rules in UX Design and Product Design", videoID: "2voBm_EWldw", views: "2.3K views" },
 ];
 
+const channels = [
+  { 
+    name: "Club UX", 
+    url: "https://www.youtube.com/@ClubUX", 
+    logo: "youtubesubs/clubux.jpg" 
+  },
+  { 
+    name: "DesignCode", 
+    url: "https://www.youtube.com/@DesignCodeTeam", 
+    logo: "youtubesubs/designcode.jpg" 
+  },
+  { 
+    name: "Kerev Design", 
+    url: "https://www.youtube.com/@KerevDesign", 
+    logo: "youtubesubs/kerev.jpg"  
+  },
+  { 
+    name: "Malewicz", 
+    url: "https://www.youtube.com/@MalewiczHype", 
+    logo: "youtubesubs/malewicz.jpg" 
+  },
+  { 
+    name: "Net Ninja", 
+    url: "https://www.youtube.com/@NetNinja", 
+    logo: "youtubesubs/ninja.jpg"  
+  },
+  { 
+    name: "uxable - learning ux together", 
+    url: "https://www.youtube.com/@uxable-learninguxtogether5943", 
+    logo: "youtubesubs/uxable.jpg"  
+  },
+  { 
+    name: "Mavi Design", 
+    url: "https://www.youtube.com/@mavidesign", 
+    logo: "youtubesubs/mavi.jpg"  
+  },
+  { 
+    name: "UxDan", 
+    url: "https://www.youtube.com/@uxdanio", 
+    logo: "youtubesubs/dan.jpg"  
+  },
+  { 
+    name: "Caler Edwards", 
+    url: "https://www.youtube.com/@CalerEdwards", 
+    logo: "youtubesubs/caler.jpg"  
+  },
+  { 
+    name: "Nick Babich", 
+    url: "https://www.youtube.com/@babichnick", 
+    logo: "youtubesubs/nick.jpg"  
+  }
+];
+
+function renderSubscriptions() {
+  const subscriptionsList = document.querySelector('.subscriptions ul');
+  subscriptionsList.innerHTML = ''; // Clear any existing content
+
+  channels.forEach(channel => {
+    const listItem = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = channel.url;
+    link.target = "_blank";
+
+    // Create logo image element
+    const logo = document.createElement('img');
+    logo.src = channel.logo;
+    logo.alt = `${channel.name} logo`;
+    logo.classList.add('channel-logo'); // Add a CSS class for styling
+
+    // Add the logo and channel name to the link
+    link.appendChild(logo);
+    link.appendChild(document.createTextNode(channel.name));
+
+    // Append the link to the list item, then to the UL
+    listItem.appendChild(link);
+    subscriptionsList.appendChild(listItem);
+  });
+}
+
+// Call the function to render subscriptions on page load
+renderSubscriptions();
+
+
 
 
 function displayThumbnails() {
