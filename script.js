@@ -95,7 +95,7 @@ const listingsData = [
     cost: '$250 person',
     rating: '4.5',
     webpage: 'https://www.soldierfield.com/',
-    category: 'attraction'
+    category: 'attractions'
   },
   {
     images: [
@@ -193,7 +193,7 @@ const listingsData = [
     cost: '$30-$40 person',
     webpage: 'https://www.threedotschicago.com/',
     rating: '4.5',
-    category: 'bar'
+    category: 'bars'
   },
   {
     images: [
@@ -248,7 +248,8 @@ const listingsData = [
     availableDate: '10 AM - 5 PM',
     cost: 'Free',
     webpage: 'https://www.lincolnparkconservancy.org/projects/conservatory-garden/',
-    rating: '4.8'
+    rating: '4.8',
+    category: 'conservatory'
   }
 ];
 

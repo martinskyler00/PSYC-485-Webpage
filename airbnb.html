@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airbnb</title>
+  <title>Chibnb | Discover Chicago</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <div class="logo">Airbnb</div>
+    <div class="logo">
+      <img src="icons/chibnb.webp" alt="Chicago Flag" class="flag-icon">
+    </div>
     <div class="account-icon">
-      <img src="https://via.placeholder.com/40" alt="Account" />
+      <img src="icons/account.webp" alt="Account" />
     </div>    
     <div class="search-container">
       <!-- Move minimized-search above search-bar -->
       <div class="minimized-search" id="minimized-search">
-        <span>Anywhere</span>
+        <a href="index.html" class="clickable-link">Home</a>
         <span>|</span>
-        <span>Any week</span>
+        <a href="youtube.html" class="clickable-link">Learn More</a>
         <span>|</span>
-        <span>Add Guests</span>
+        <a href="airbnb.html" class="clickable-link">Explore Chicago</a>
       </div>
       <div class="search-bar" id="search-bar">
         <input type="text" id="location" placeholder="Where are you going?" />
@@ -34,11 +36,11 @@
   <section class="place-options-container">
     <div class="place-options">
     <div class="option" data-category="all">
-      <img src="icons/coffeeshop.png" alt="All">
+      <img src="icons/all.png" alt="All">
       <p>All</p>
     </div>
       <div class="option" data-category="coffee">
-      <img src="icons/coffeeshop.png" alt="Coffee Shop">
+      <img src="icons/coffee.jpg" alt="Coffee Shop">
       <p>Coffee</p>
     </div>
     <div class="option" data-category="restaurant">
@@ -50,7 +52,7 @@
       <p>Seasonal</p>
     </div>
     <div class="option" data-category="bars">
-      <img src="icons/bars.png" alt="Bars">
+      <img src="icons/bars.jpg" alt="Bars">
       <p>Bars</p>
     </div>
     <div class="option" data-category="attractions">
@@ -62,19 +64,19 @@
       <p>Museums</p>
     </div>
     <div class="option" data-category="park">
-      <img src="icons/museum.png" alt="Park">
+      <img src="icons/park.jpg" alt="Park">
       <p>Parks</p>
     </div>
     <div class="option" data-category="beach">
-      <img src="icons/museum.png" alt="Beach">
+      <img src="icons/beach.avif" alt="Beach">
       <p>Beaches</p>
     </div>
     <div class="option" data-category="zoo">
-      <img src="icons/museum.png" alt="Zoo">
+      <img src="icons/zoo.jpg" alt="Zoo">
       <p>Zoos</p>
     </div>
     <div class="option" data-category="conservatory">
-      <img src="icons/museum.png" alt="Conservatory">
+      <img src="icons/conservatory.png" alt="Conservatory">
       <p>Conservatory</p>
     </div>
   </div>
