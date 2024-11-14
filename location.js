@@ -61,10 +61,10 @@ const listingsData = [
     {
         images: [
             'imagefile1/Christkindl1.jpg',
-            'imagefile2/Christkindl2.jpg',
-            'imagefile3/Christkindl3.jpg',
-            'imagefile4/Christkindl4.jpeg',
-            'imagefile5/Christkindl5.webp'
+            'imagefile2/christkindl2.jpg',
+            'imagefile3/christkindl3.jpg',
+            'imagefile4/christkindl4.jpeg',
+            'imagefile5/christkindl5.webp'
         ],
         location: 'Christkindl Market Chicago',
         type: ' 50 W Washington St, Chicago, IL 60602',

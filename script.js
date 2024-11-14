@@ -44,8 +44,8 @@ const listingsData = [
   {
     images: [
       'imagefile1/Christkindl1.jpg',
-      'imagefile2/Christkindl2.jpg',
-      'imagefile3/Christkindl3.jpg'
+      'imagefile2/christkindl2.jpg',
+      'imagefile3/christkindl3.jpg'
     ],
     location: 'Christkindl Market Chicago',
     distance: '50 W Washington St',
