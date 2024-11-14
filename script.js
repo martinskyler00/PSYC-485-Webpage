@@ -205,6 +205,7 @@ const listingsData = [
     distance: '337 E Randolph St',
     availableDate: '6 AM - 9 PM',
     cost: 'Free',
+    webpage: 'https://maggiedaleypark.com/',
     rating: '4.7',
     category: 'park'
   },
@@ -218,31 +219,36 @@ const listingsData = [
     distance: '1600 N Jean-Baptiste Point Du Sable Lake Shore Dr',
     availableDate: '11 AM - 7 PM',
     cost: 'Free',
-    rating: '4.0'
+    webpage: 'https://www.chicagoparkdistrict.com/parks-facilities/north-avenue-beach',
+    rating: '4.0',
+    category: 'beach'
   },
   {
     images: [
-      'imagefile1/Jacks1.jpg',
-      'imagefile2/jacks2.webp',
-      'imagefile3/jacks3.webp'
+      'imagefile1/zoo1.jpg',
+      'imagefile2/zoo2.jpg',
+      'imagefile3/zoo3.jpg'
     ],
-    location: 'Sample',
-    distance: '20 miles away',
-    availableDate: 'Oct 30, 2024',
-    cost: '$40 night',
-    rating: '4.2'
+    location: 'Lincoln Park Zoo',
+    distance: '2001 N Clark St',
+    availableDate: '10 AM - 5 PM',
+    cost: 'Free',
+    webpage: 'https://www.lpzoo.org/',
+    rating: '4.9',
+    category: 'zoo'
   },
   {
     images: [
-      'imagefile1/offshore1.jpg',
-      'imagefile2/offshore2.jpg',
-      'imagefile3/offshore3.jpg'
+      'imagefile1/conserve1.jpg',
+      'imagefile2/conserve2.jpg',
+      'imagefile3/conserve3.jpg'
     ],
-    location: 'Sample',
-    distance: '7 miles away',
-    availableDate: 'Dec 1, 2024',
-    cost: '$600 night',
-    rating: '4.9'
+    location: 'Lincoln Park Conservatory',
+    distance: '2391 N Stockton Dr',
+    availableDate: '10 AM - 5 PM',
+    cost: 'Free',
+    webpage: 'https://www.lincolnparkconservancy.org/projects/conservatory-garden/',
+    rating: '4.8'
   }
 ];
 
