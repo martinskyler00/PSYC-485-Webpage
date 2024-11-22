@@ -10,24 +10,22 @@ body {
   color: #000000;
 }
 
-/* Header styling */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  padding: 5px 18px; /* Reduced padding to make header thinner */
+  padding: 5px 18px;
   color: #ffffff;
 }
 
 .search-bar-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between the search and voice search */
+  gap: 10px;
   flex-grow: 1;
 }
 
-/* Stack search bar and button links vertically */
 .search-bar-wrapper {
   display: flex;
   flex-direction: column;
@@ -35,18 +33,16 @@ header {
   width: 100%;
 }
 
-/* Buttons below the search bar */
 .button-links {
   display: flex;
   gap: 15px;
-  margin-top: 8px; /* Space between search bar and buttons */
-  justify-content: center; /* Center-align the buttons under the search bar */
+  margin-top: 8px;
+  justify-content: center;
 }
 
-/* Style individual buttons */
 .button-link {
   padding: 8px 16px;
-  background-color: gray; /* YouTube red or custom color */
+  background-color: gray; 
   color: white;
   text-decoration: none;
   border-radius: 4px;
@@ -57,8 +53,6 @@ header {
 .button-link:hover {
   background-color: #CC0000;
 }
-
-
 
 .left-section {
   display: flex;
@@ -72,12 +66,12 @@ header {
 }
 
 .youtube-logo {
-  height: 60px; /* Reduced height for a thinner header */
+  height: 60px; 
   cursor: pointer;
 }
 
 .youtube-logos {
-  height: 100px; /* Reduced height for a thinner header */
+  height: 100px;
   margin-top: 20px;
   cursor: pointer;
 }
@@ -89,27 +83,25 @@ header {
   width: 100%;
 }
 
-/* Search bar styling */
 .search-bar {
   display: flex;
   flex-grow: 1;
   align-items: center;
   width: 100%;
-  max-width: 700px; /* Increased width */
+  max-width: 700px; 
   background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 25px;
   padding: 5px 8px;
 }
 
-/* Adjusted icon and input font sizes for thinner header */
 .search-bar input {
   width: 100%;
-  padding: 8px; /* Slightly reduced padding for thinner appearance */
+  padding: 8px;
   background-color: transparent;
   border: none;
   color: #000000;
-  font-size: 0.9em; /* Slightly smaller font for thinner look */
+  font-size: 0.9em; 
   outline: none;
 }
 
@@ -117,13 +109,13 @@ header {
   background: none;
   border: none;
   color: #555555;
-  font-size: 1em; /* Slightly smaller icon for thinner header */
+  font-size: 1em; 
   cursor: pointer;
   padding-left: 8px;
 }
 
 .voice-search {
-  margin-left: 8px; /* Reduced spacing to match thinner header */
+  margin-left: 8px;
   background: none;
   border: none;
   color: #555555;
@@ -163,7 +155,6 @@ header {
   margin-top: 20px;
 }
 
-/* Subscriptions Section Styling */
 .subscriptions {
   margin-top: 20px;
 }
@@ -195,15 +186,14 @@ header {
   border-radius: 4px;
 }
 
-/* Thin line separator between sections */
 .section-divider {
   border: none;
   border-top: 1px solid #ddd;
-  margin: 15px 0; /* Spacing around the separator */
+  margin: 15px 0;
 }
 
 .channel-logo {
-  width: 24px; /* Adjust size as needed */
+  width: 24px;
   height: 24px;
   margin-right: 8px;
   border-radius: 50%;
@@ -221,7 +211,6 @@ header {
   padding: 15px;
 }
 
-/* Compact sidebar */
 .compact-sidebar {
   display: none;
   width: 80px;
@@ -264,14 +253,13 @@ header {
   margin: 0;
 }
 
-/* Sidebar link styling */
 .sidebar-section ul li a {
   color: #555;
   font-size: 14px;
   text-decoration: none;
   padding: 5px;
   display: flex;
-  align-items: center; /* Align icon and text */
+  align-items: center;
   border-radius: 4px;
   transition: background 0.3s;
 }
@@ -314,13 +302,12 @@ header {
 }
 
 .video-thumbnail {
-  width: 100%;             /* Full width of the thumbnail container */
-  height: 205px;           /* Same height as iframe */
-  object-fit: cover;       /* Maintain aspect ratio, fill the container */
-  border-radius: 12px;     /* Rounded corners */
+  width: 100%;           
+  height: 205px;        
+  object-fit: cover;      
+  border-radius: 12px;     
 }
 
-/* Style for main links (Home, Shorts, Subscriptions) */
 .main-links ul li {
   margin: 10px 0;
 }
@@ -346,7 +333,6 @@ header {
   margin: 0;
 }
 
-/* Divider line between main-links and subscriptions */
 .main-links {
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
@@ -354,17 +340,17 @@ header {
 }
 
 a {
-  text-decoration: none; /* Remove underline from all links */
-  color: inherit;        /* Inherit color from parent element */
+  text-decoration: none; 
+  color: inherit;      
 }
 
 .thumbnail a {
-  text-decoration: none; /* Ensure underline is removed specifically for thumbnails */
+  text-decoration: none;
 }
 
 .thumbnails {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 videos per row for larger screens */
+  grid-template-columns: repeat(6, 1fr); 
   gap: 15px;
   row-gap: 30px;
 }
@@ -403,22 +389,22 @@ a {
 
 .shorts-container {
   display: grid;
-  grid-template-columns: repeat(9, 1fr); /* 3 per row for split screen */
+  grid-template-columns: repeat(9, 1fr);
   gap: 15px;
   overflow: hidden;
 }
 
 .short-thumbnail {
   width: 100%;
-  height: 400px; /* Set height as per original short size */
+  height: 400px;
   object-fit: cover;
   border-radius: 12px;
 }
 
 .short iframe {
   width: 100%;
-  height: 400px; /* Thinner height for a slimmer look */
-  border-radius: 12px; /* Rounded corners */
+  height: 400px;
+  border-radius: 12px; 
   overflow: hidden;
 }
 
@@ -435,13 +421,13 @@ a {
 }
 
 .short .title {
-  font-size: 1em; /* Adjust font size as needed */
+  font-size: 1em; 
   font-weight: bold;
   color: #000000;
-  text-align: left; /* Align text as per your preference */
-  margin-top: 10px; /* Adds some space between video and title */
-  white-space: normal; /* Allow text to wrap */
-  overflow: visible; /* Ensure text wraps and doesn't overflow */
+  text-align: left; 
+  margin-top: 10px; 
+  white-space: normal;
+  overflow: visible;
 }
 
 .short .views {
@@ -469,25 +455,24 @@ a {
   background: #000;
 }
 
-/* Responsive Design */
 /* Medium Screens: 3 videos per row */
 @media (max-width: 1600px) {
   .thumbnails {
-      grid-template-columns: repeat(3, 1fr); /* 3 videos per row for medium screens */
+      grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Tablet Screens: 2 videos per row */
 @media (max-width: 768px) {
   .thumbnails {
-      grid-template-columns: repeat(2, 1fr); /* 2 videos per row for tablets */
+      grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Mobile Screens: 1 video per row */
 @media (max-width: 480px) {
   .thumbnails {
-      grid-template-columns: 1fr; /* 1 video per row for mobile */
+      grid-template-columns: 1fr;
   }
 }
 
@@ -511,7 +496,7 @@ a {
 
 @media (max-width: 480px) {
   .shorts-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on smaller screens */
+    grid-template-columns: repeat(2, 1fr);
   }
   .short:nth-child(n+3) {
     display: none;

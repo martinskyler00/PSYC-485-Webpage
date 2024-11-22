@@ -1,5 +1,3 @@
-// location.js
-
 const listingsData = [
     {
         images: [
@@ -349,30 +347,22 @@ const listingsData = [
 const urlParams = new URLSearchParams(window.location.search);
 const locationName = urlParams.get('location');
 
-
-
-
-// Select elements for dynamic content
 const locationTitle = document.getElementById('location-title');
 const imageGallery = document.getElementById('image-gallery');
 const detailsSection = document.querySelector('.details-section');
 const googleReviewsLink = document.getElementById('google-reviews-link');
 
-// Find the listing based on location name
 const listing = listingsData.find(item => item.location === locationName);
 
 if (listing) {
-    // Update the page title and header with the listing's name
     locationTitle.innerText = listing.location;
 
-    // Populate images into the gallery
     const mainImageHTML = `<img src="${listing.images[0]}" alt="Main Image" class="main-image">`;
     const additionalImagesHTML = listing.images.slice(1, 5).map(img => 
         `<img src="${img}" alt="Thumbnail Image" class="small-image">`).join('');
     
     imageGallery.innerHTML = mainImageHTML + additionalImagesHTML;
 
-    // Populate the details section with the listing's details
     document.getElementById('location-type').innerText = listing.type;
     document.getElementById('location-guests').innerText = listing.description;
     document.getElementById('location-beds').innerText = listing.specialties;
@@ -382,7 +372,6 @@ if (listing) {
     document.getElementById('location-amenities').innerText = listing.amenities;
     document.getElementById('location-cost').innerText = listing.cost;
 
-    // Set the Google reviews link
     if (listing.googleReviewLink) {
         googleReviewsLink.href = listing.googleReviewLink;
     }
@@ -390,8 +379,6 @@ if (listing) {
     locationTitle.innerText = 'Location not found';
 }
 
-
-// JavaScript in location.html
 function getQueryParams() {
     const params = new URLSearchParams(window.location.search);
     return {
@@ -404,11 +391,9 @@ function getQueryParams() {
     const { webpage } = getQueryParams();
     const reserveButton = document.getElementById('reserve-btn');
   
-    // Set the Reserve button link to the webpage
     if (webpage) {
         reserveButton.onclick = () => window.open(webpage, '_blank');
       }
     }
   
-  // Initialize on page load
   window.onload = setReserveButton;

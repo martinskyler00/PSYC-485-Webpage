@@ -35,13 +35,11 @@
   </main>
 
   <script>
-    // Function to get video ID from URL parameters
     function getVideoID() {
       const urlParams = new URLSearchParams(window.location.search);
       return urlParams.get('videoID');
     }
 
-    // Embed the selected video with fullscreen capability
     function loadVideo() {
       const videoID = getVideoID();
       if (videoID) {

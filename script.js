@@ -267,7 +267,6 @@ function displayListings(listings) {
       `<span class="dot ${i === 0 ? 'active' : ''}"></span>`
     ).join('');
 
-    // Pass the `webpage` URL as a query parameter
     const listingCard = `
       <a href="location.html?location=${encodeURIComponent(listing.location)}&webpage=${encodeURIComponent(listing.webpage)}" class="listing-link">
         <div class="listing-card">
@@ -306,7 +305,6 @@ function filterListings(category) {
   displayListings(filteredListings);
 }
 
-// Event listener for each icon to trigger the filter
 document.querySelectorAll('.place-options .option').forEach(option => {
   option.addEventListener('click', () => {
     const category = option.getAttribute('data-category');
@@ -315,7 +313,7 @@ document.querySelectorAll('.place-options .option').forEach(option => {
 });
 
 window.onload = function() {
-  displayListings(listingsData); // Display all listings initially
+  displayListings(listingsData);
 };
 
 
@@ -332,8 +330,8 @@ function initializeCarousels() {
 
     function moveToImage(index) {
       currentIndex = index;
-      const offset = -currentIndex * 100; // Shift container by 100% for each image
-      images.style.transform = `translateX(${offset}%)`; // Move to the image at the specified index
+      const offset = -currentIndex * 100;
+      images.style.transform = `translateX(${offset}%)`;
       updateDots();
     }
 
@@ -343,23 +341,22 @@ function initializeCarousels() {
       });
     }
 
-    // Event listeners for arrow buttons
     const prevArrow = card.querySelector('.prev-arrow');
     const nextArrow = card.querySelector('.next-arrow');
 
     prevArrow.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevents any link behavior
+      event.preventDefault();
       moveToImage((currentIndex > 0) ? currentIndex - 1 : totalImages - 1);
     });
 
     nextArrow.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevents any link behavior
+      event.preventDefault();
       moveToImage((currentIndex < totalImages - 1) ? currentIndex + 1 : 0);
     });
 
     dots.forEach((dot, i) => {
       dot.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevents any link behavior
+        event.preventDefault();
         moveToImage(i);
       });
     });

@@ -80,7 +80,7 @@ const channels = [
 
 function renderSubscriptions() {
   const subscriptionsList = document.querySelector('.subscriptions ul');
-  subscriptionsList.innerHTML = ''; // Clear any existing content
+  subscriptionsList.innerHTML = '';
 
   channels.forEach(channel => {
     const listItem = document.createElement('li');
@@ -88,23 +88,19 @@ function renderSubscriptions() {
     link.href = channel.url;
     link.target = "_blank";
 
-    // Create logo image element
     const logo = document.createElement('img');
     logo.src = channel.logo;
     logo.alt = `${channel.name} logo`;
-    logo.classList.add('channel-logo'); // Add a CSS class for styling
+    logo.classList.add('channel-logo');
 
-    // Add the logo and channel name to the link
     link.appendChild(logo);
     link.appendChild(document.createTextNode(channel.name));
 
-    // Append the link to the list item, then to the UL
     listItem.appendChild(link);
     subscriptionsList.appendChild(listItem);
   });
 }
 
-// Call the function to render subscriptions on page load
 renderSubscriptions();
 
 
@@ -118,7 +114,6 @@ function displayThumbnails() {
 
   const screenWidth = window.innerWidth;
 
-  // If full screen (greater than 1500px), display all 12 videos in one container with 6 per row
   if (screenWidth > 1500) {
     recommendVideos.forEach((video) => {
       const thumbnailElement = document.createElement('div');
@@ -135,14 +130,11 @@ function displayThumbnails() {
       `;
       topThumbnailsContainer.appendChild(thumbnailElement);
     });
-    // Hide bottom-thumbnails section when in full screen
     bottomThumbnailsContainer.parentElement.style.display = 'none';
   } else {
-    // If split screen or smaller, split videos into two sections
-    const topVideos = recommendVideos.slice(0, 6); // First 6 videos
-    const bottomVideos = recommendVideos.slice(6); // Last 6 videos
+    const topVideos = recommendVideos.slice(0, 6);
+    const bottomVideos = recommendVideos.slice(6);
 
-    // Show both sections for split screen
     topVideos.forEach((video) => {
       const thumbnailElement = document.createElement('div');
       thumbnailElement.classList.add('thumbnail');
@@ -175,12 +167,10 @@ function displayThumbnails() {
       bottomThumbnailsContainer.appendChild(thumbnailElement);
     });
 
-    // Show bottom-thumbnails section when in split screen
     bottomThumbnailsContainer.parentElement.style.display = 'block';
   }
 }
 
-// Call `displayThumbnails` on load and on window resize
 window.onload = displayThumbnails;
 window.onresize = displayThumbnails;
 
@@ -198,14 +188,12 @@ function displayShorts() {
   const screenWidth = window.innerWidth;
   let shortsToShow;
 
-  // Limit the number of shorts displayed based on screen size
   if (screenWidth > 1500) {
-    shortsToShow = shortVideos.length; // Show all shorts on full screen
+    shortsToShow = shortVideos.length;
   } else {
-    shortsToShow = 5; // Show only 5 shorts on split screen or smaller
+    shortsToShow = 5;
   }
 
-  // Display only the specified number of shorts
   shortVideos.slice(0, shortsToShow).forEach((video) => {
     const shortElement = document.createElement('div');
     shortElement.classList.add('short');
@@ -222,7 +210,6 @@ function displayShorts() {
   });
 }
 
-// Call `displayShorts` on load and on window resize to ensure responsiveness
 window.onload = function() {
   displayThumbnails();
   displayShorts();

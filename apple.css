@@ -16,19 +16,19 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: center; /* Center all elements horizontally */
-  align-items: center; /* Center elements vertically */
-  background-color: white; /* Background color */
-  padding: 5px 20px; /* Padding for spacing */
+  justify-content: center; 
+  align-items: center;
+  background-color: white;
+  padding: 5px 20px;
   color: white;
   border-bottom: 1px solid white;
 }
 
 .button-links {
   display: flex;
-  gap: 20px; /* Space between buttons */
-  justify-content: center; /* Center buttons horizontally */
-  flex-grow: 1; /* Allows the buttons to take up available space evenly */
+  gap: 20px;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .button-link {
@@ -40,7 +40,6 @@ body {
   transition: background-color 0.3s;
 }
 
-/* Align the nav links center */
 .nav-links {
   display: flex;
   gap: 20px;
@@ -52,7 +51,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: black;
-  margin-right: 20px; /* Space between logo and buttons */
+  margin-right: 20px; 
 }
 
 .navbar .nav-links li {
@@ -80,12 +79,11 @@ body {
   position: relative;
 }
 
-/* Full-width dropdown menu, positioned under the Apple logo */
 .dropdown-menu {
   position: absolute;
-  top: 100%; /* Right below the navbar */
-  left: 20px; /* Align with the left padding of the Apple logo */
-  width: calc(100vw - 40px); /* Full width minus padding for alignment */
+  top: 100%;
+  left: 20px;
+  width: calc(100vw - 40px);
   background-color: #000;
   display: none;
   opacity: 0;
@@ -98,11 +96,10 @@ body {
   box-sizing: border-box;
 }
 
-/* Dropdown tabs center alignment */
 .dropdown-tab {
   flex: 1;
   text-align: center;
-  max-width: 150px; /* Width constraint for each tab */
+  max-width: 150px;
   margin: 0 10px;
 }
 
@@ -124,14 +121,12 @@ body {
   color: white;
 }
 
-/* Show dropdown menu on hover */
 .dropdown:hover .dropdown-menu {
   display: flex;
   opacity: 1;
   visibility: visible;
 }
 
-/* Hero Section */
 .hero {
   height: 80vh;
   background-image: url('images/hero.jpg');
@@ -169,7 +164,6 @@ body {
   font-size: 16px;
 }
 
-/* Product Section */
 .products {
   padding: 50px;
   background-color: #fff;
@@ -205,7 +199,6 @@ body {
   font-weight: 600;
 }
 
-/* Footer */
 footer {
   background-color: #333;
   color: #fff;
@@ -229,7 +222,6 @@ footer p {
   font-size: 12px;
 }
 
-/* Responsive background images */
 .iphone16-pro, .iphone16 {
   background-size: cover;
   background-position: center;
@@ -240,33 +232,33 @@ footer p {
 
 .iphone16-pro {
   background-image: url('youtubeicons/chibnbbanner.webp');
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
-  width: 100%; /* Set the width to 100% of the container */
-  height: auto; /* Maintain the aspect ratio */
-  position: relative; /* Keep it positioned within its parent */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; 
+  height: auto;
+  position: relative;
   z-index: 1;
 }
 
 .iphone16 {
   background-image: url('youtubeicons/uitubebanner (3).webp');
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
-  width: 100%; /* Set the width to 100% of the container */
-  height: auto; /* Maintain the aspect ratio */
-  position: relative; /* Keep it positioned within its parent */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto; 
+  position: relative; 
   z-index: 1;
 }
 
 .featured-item {
   position: relative;
   width: 100vw;
-  min-height: 53vh; /* Adjust height as needed */
+  min-height: 53vh; 
   display: flex;
-  flex-direction: column; /* Arrange items vertically */
-  justify-content: space-between; /* Space items between the top, middle, and bottom */
+  flex-direction: column; 
+  justify-content: space-between;
   align-items: center;
   color: white;
   text-align: center;
@@ -286,8 +278,8 @@ footer p {
   color: white;
   background-color: transparent;
   display: flex;
-  flex-direction: column; /* Ensure vertical alignment */
-  height: 100%; /* Full height to distribute spacing */
+  flex-direction: column; 
+  height: 100%; 
 }
 
 .featured-content h1 {
@@ -307,8 +299,8 @@ footer p {
 }
 
 .top-content {
-  align-self: center; /* Center horizontally */
-  margin-top: 20px; /* Optional spacing from the top */
+  align-self: center; 
+  margin-top: 20px; 
 }
 
 .top-content h1 {
@@ -321,8 +313,8 @@ footer p {
 }
 
 .middle-content {
-  align-self: center; /* Center horizontally */
-  margin: auto 0; /* Center vertically between top and bottom */
+  align-self: center;
+  margin: auto 0;
 }
 
 .middle-content p {
@@ -330,8 +322,8 @@ footer p {
 }
 
 .bottom-content {
-  align-self: center; /* Center horizontally */
-  margin-bottom: 20px; /* Optional spacing from the bottom */
+  align-self: center;
+  margin-bottom: 20px;
 }
 
 .buttons {
@@ -358,11 +350,11 @@ footer p {
 /* For mobile screens and small devices */
 @media (max-width: 768px) {
   .featured-item {
-    min-height: 40vh; /* Reduce the height for smaller screens */
+    min-height: 40vh;
   }
 
   .featured-content h1 {
-    font-size: 28px; /* Adjust font size for smaller screens */
+    font-size: 28px; 
   }
 
   .featured-content p {
@@ -370,7 +362,7 @@ footer p {
   }
 
   .cta-button, .buy-button {
-    padding: 12px 20px; /* Smaller button padding */
+    padding: 12px 20px; 
     font-size: 14px;
   }
 }
@@ -378,11 +370,11 @@ footer p {
 /* For very small devices, like phones */
 @media (max-width: 480px) {
   .featured-item {
-    min-height: 35vh; /* Further reduce height for very small screens */
+    min-height: 35vh;
   }
 
   .featured-content h1 {
-    font-size: 24px; /* Reduce the font size more for small screens */
+    font-size: 24px;
   }
 
   .featured-content p {
@@ -390,7 +382,7 @@ footer p {
   }
 
   .cta-button, .buy-button {
-    padding: 10px 18px; /* Further adjust button size */
+    padding: 10px 18px;
     font-size: 12px;
   }
 }
